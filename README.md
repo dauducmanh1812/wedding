@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# 💍 Minimalist Wedding Invitation Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A beautiful, single-page wedding invitation website built with React. This project is designed to be extremely easy to customize, with all content, text, and settings managed through a simple JSON file. It features a minimal Node.js/Express backend to handle guest wishes submitted via an RSVP form.
 
-## Available Scripts
+## 🌟 Features
+
+-   **Single-Page Layout:** A smooth, modern, single-page scrolling experience.
+-   **Data-Driven Content:** All text (names, dates, locations, timeline) is loaded from `src/data.json`, making customization fast and code-free.
+-   **Interactive RSVP Form:** Guests can send their wishes and confirm attendance. Submissions are saved to a `wishes.json` file on the server.
+-   **Dynamic Modals:**
+    -   A "Thank You" pop-up appears after a guest submits the RSVP form.
+    -   A "Gifting" pop-up with QR codes appears when the "Mừng Cưới" button is clicked.
+-   **Live Countdown:** A real-time countdown timer builds anticipation for the special day.
+-   **Background Audio:** Includes an option for background music to enhance the ambiance.
+-   **Minimal Backend:** A lightweight Express.js server handles form submissions.
+-   **Easy to Deploy:** Built with Create React App, making the build and deployment process straightforward.
+
+## 🛠️ Tech Stack
+
+-   **Frontend:** React.js
+-   **Backend:** Node.js, Express.js
+-   **Development Server:** `concurrently` (to run frontend and backend simultaneously)
+
+## 🚀 Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You need to have [Node.js](https://nodejs.org/) (which includes npm) installed on your computer. Version 14.x or higher is recommended.
+
+### Installation & Setup
+
+1.  **Clone the repository (or set up the project files):**
+    If you have git, you can clone it. Otherwise, just make sure all the files provided earlier are in a project folder.
+    ```bash
+    git clone https://your-repository-url.git
+    cd your-project-folder
+    ```
+
+2.  **Install NPM packages:**
+    This command will read the `package.json` file and install all the necessary dependencies for both the React app and the Express server.
+    ```bash
+    npm install
+    ```
+
+3.  **Run the application:**
+    This single command starts both the React development server (on port 3000) and the backend Express server (on port 3001) at the same time.
+    ```bash
+    npm start
+    ```
+
+Your browser should automatically open to `http://localhost:3000`, where you can see the live website.
+
+## 🎨 Customization
+
+This project is designed to be easily customized without touching the React code.
+
+### 1. Editing Content (Text)
+
+All text displayed on the website can be changed in the **`src/data.json`** file. Open this file and edit the values for names, dates, family information, timeline events, etc.
+
+```json
+{
+  "couple": {
+    "groom": "Hồng Quân",
+    "bride": "Vân Anh",
+    "shortName": "Quân & Anh"
+  },
+  "event": {
+    "date": "18.05.2025",
+    "fullDate": "Chủ Nhật, 18 Tháng 5, Năm 2025",
+    // ... and so on
+  }
+}
+```
+
+### 2. Changing Images
+
+-   All images are located in the **`public/images/`** folder, organized by section (`hero`, `memories`, `modals`, etc.).
+-   To change an image, simply replace the file in the corresponding folder with your own image. **Make sure the new image has the exact same name and extension.**
+-   For the QR codes, place your generated QR image files in `public/images/modals/` and update the paths in `src/data.json` if needed.
+
+### 3. Updating Background Music
+
+-   Place your desired audio file (e.g., in `.mp3` format) inside the **`public/audio/`** folder.
+-   Ensure its name is `background-music.mp3`, or update the file name in the `<audio>` tag within `src/App.js`.
+
+### 4. Modifying the Countdown
+
+-   To set the target date and time for the countdown, edit the `countdownTarget` value in **`src/data.json`**.
+-   The format must be `YYYY-MM-DDTHH:mm:ss`. For example: `"2025-05-18T09:00:00"`.
+
+## 📝 How the RSVP Form Works
+
+1.  A guest fills out the form on the website and clicks "GỬI LỜI NHẮN".
+2.  The React app sends the form data to the backend API endpoint (`/api/submit-wish`).
+3.  The Express server (`server.js`) receives the data.
+4.  The server reads the existing `src/wishes.json` file, adds the new message to the list, and saves the file.
+5.  All submitted wishes can be found in the **`src/wishes.json`** file.
+
+## 📜 Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+-   `npm start`: Runs the app in development mode.
+-   `npm run build`: Builds the app for production to the `build` folder.
+-   `npm test`: Launches the test runner in interactive watch mode.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
