@@ -1,38 +1,248 @@
-.App {
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f9f8f6;
+  color: #3e4a3a;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Helper Classes */
+.section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dark-bg {
+  background-color: #3e4a3a;
+  color: #f9f8f6;
+}
+
+/* Fonts & Typography */
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+.script-font {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  /* background-image: url('/images/hero/hero-bg.jpg'); */
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-section h1 {
+  font-size: 6rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Save the Date Section */
+.save-the-date-section h2 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.save-the-date-section .date {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.save-the-date-section img {
+  max-width: 80%;
+  margin-top: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Section */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: 20px auto 0;
+}
+.calendar-grid div {
+  padding: 10px;
+}
+.calendar-grid .day-name {
+  font-weight: bold;
+}
+.calendar-grid .date-number.highlight {
+  border: 2px solid #f9f8f6;
+  border-radius: 50%;
+  position: relative;
+}
+/* Simple heart, can be improved with SVG */
+.calendar-grid .date-number.highlight::after {
+  content: '♥';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 1.2rem;
+}
+
+
+/* Family Section */
+.family-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+.family-side {
+  border-left: 1px solid #ccc;
+  padding-left: 40px;
+}
+.family-side:first-child {
+  border-left: none;
+  border-right: 1px solid #ccc;
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+/* Timeline Section */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.timeline-item .icon {
+  width: 50px;
+  height: 50px;
+}
+.timeline-item h3 {
+  margin: 0 0 5px 0;
+}
+.timeline-item p {
+  margin: 0;
+}
+
+/* Memories Section */
+.memories-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+.memories-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RSVP Form */
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto 0;
+}
+.rsvp-form input, .rsvp-form textarea, .rsvp-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.rsvp-form button {
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.rsvp-form .submit-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.rsvp-form .gifting-btn {
+  background-color: #3e4a3a;
+  color: white;
+}
+.rsvp-form .submit-btn:hover {
+  background-color: #ddd;
+}
+.rsvp-form .gifting-btn:hover {
+  background-color: #52634d;
+}
+
+/* Countdown */
+.countdown {
+  font-size: 3rem;
+  letter-spacing: 10px;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background-color: #f9f8f6;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 500px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.modal-content img {
+  max-width: 100%;
+  margin-top: 20px;
+}
+.gifting-modal-content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.gifting-modal-content .qr-code-container {
+  flex: 1;
+}
+.gifting-modal-content img {
+  width: 150px;
+  height: 150px;
 }
