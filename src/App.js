@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import siteData from "./data.json";
-import thankYouBg from './assets/thank-you-bg.jpg';
+// import thankYouBg from './assets/thank-you-bg.jpg';
 
 function App() {
   // State for Modals
@@ -276,7 +276,7 @@ function App() {
       {/* --- FINAL THANK YOU SECTION --- */}
       <section
         className="thank-you-section"
-        style={{ backgroundImage: `url(${thankYouBg})` }} // <-- THAY ĐỔI DÒNG NÀY
+        // style={{ backgroundImage: `url(${thankYouBg})` }} // <-- THAY ĐỔI DÒNG NÀY
       >
         <div className="thank-you-content">
           <p>{siteData.thankYou.message}</p>
