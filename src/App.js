@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import siteData from "./data.json";
+import thankYouBg from './assets/thank-you-bg.jpg';
 
 function App() {
   // State for Modals
