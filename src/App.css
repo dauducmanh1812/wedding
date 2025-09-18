@@ -237,7 +237,6 @@ h3 {
 .thank-you-section {
   position: relative;
   padding: 100px 20px;
-  /* background-image: url('/images/closing/thank-you-bg.jpg'); */ /* <-- XÓA DÒNG NÀY */
   background-size: cover;
   background-position: center;
   color: white;
@@ -327,4 +326,100 @@ h3 {
 .gifting-modal-content img {
   width: 150px;
   height: 150px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .script-font {
+    font-size: 1.8rem;
+  }
+
+  .save-the-date-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .save-the-date-section .date {
+    font-size: 2rem;
+  }
+
+  .calendar-grid {
+    font-size: 0.8rem;
+    gap: 5px;
+  }
+
+  .calendar-grid div {
+    padding: 5px;
+  }
+
+  .family-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .family-side {
+    border-left: none;
+    border-right: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .rsvp-form {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .rsvp-form input,
+  .rsvp-form textarea,
+  .rsvp-form select {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .rsvp-form button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .countdown {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  .thank-you-content p {
+    font-size: 1.2rem;
+  }
+
+  .thank-you-content .script-font {
+    font-size: 2.5rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .gifting-modal-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gifting-modal-content img {
+    width: 120px;
+    height: 120px;
+  }
 }
