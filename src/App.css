@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
   background-color: #f9f8f6;
-  color: #3e4a3a;
+  color: #b8d8be;
   text-align: center;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .dark-bg {
-  background-color: #3e4a3a;
+  background-color: #b8d8be;
   color: #f9f8f6;
 }
 
@@ -215,7 +215,7 @@ h3 {
 }
 
 .rsvp-form .gifting-btn {
-  background-color: #3e4a3a;
+  background-color: #b8d8be;
   color: white;
 }
 
