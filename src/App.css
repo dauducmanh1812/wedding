@@ -237,7 +237,7 @@ h3 {
 .thank-you-section {
   position: relative;
   padding: 100px 20px;
-  background-image: url('/images/closing/thank-you-bg.jpg');
+  /* background-image: url('/images/closing/thank-you-bg.jpg'); */ /* <-- XÓA DÒNG NÀY */
   background-size: cover;
   background-position: center;
   color: white;

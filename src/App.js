@@ -273,7 +273,10 @@ function App() {
       </section>
 
       {/* --- FINAL THANK YOU SECTION --- */}
-      <section className="thank-you-section">
+      <section
+        className="thank-you-section"
+        style={{ backgroundImage: `url(${thankYouBg})` }} // <-- THAY ĐỔI DÒNG NÀY
+      >
         <div className="thank-you-content">
           <p>{siteData.thankYou.message}</p>
           <p className="script-font">{siteData.thankYou.signature}</p>
