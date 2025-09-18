@@ -59,14 +59,14 @@ h3 {
 /* Save the Date Section */
 .save-the-date-section {
   background-image: url('https://w.ladicdn.com/s800x800/6322a62f2dad980013bb5005/fdf-20250420031246-imior.png');
-  width: 480.2px;
-  height: 480.2px;
+  /* position: absolute; */
+  /* width: 480.2px; */
+  /* height: 480.2px; */
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
   background-attachment: scroll;
   background-origin: content-box;
-  position: absolute;
   margin: 0 auto;
   pointer-events: none;
 }
