@@ -26,7 +26,9 @@ body {
 }
 
 /* Fonts & Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: normal;
 }
 
@@ -55,6 +57,20 @@ h1, h2, h3 {
 }
 
 /* Save the Date Section */
+.save-the-date-section {
+  background-image: url('https://w.ladicdn.com/s800x800/6322a62f2dad980013bb5005/fdf-20250420031246-imior.png');
+  width: 480.2px;
+  height: 480.2px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  background-attachment: scroll;
+  background-origin: content-box;
+  position: absolute;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
 .save-the-date-section h2 {
   font-size: 2rem;
   letter-spacing: 2px;
@@ -80,17 +96,21 @@ h1, h2, h3 {
   max-width: 400px;
   margin: 20px auto 0;
 }
+
 .calendar-grid div {
   padding: 10px;
 }
+
 .calendar-grid .day-name {
   font-weight: bold;
 }
+
 .calendar-grid .date-number.highlight {
   border: 2px solid #f9f8f6;
   border-radius: 50%;
   position: relative;
 }
+
 /* Simple heart, can be improved with SVG */
 .calendar-grid .date-number.highlight::after {
   content: '♥';
@@ -108,10 +128,12 @@ h1, h2, h3 {
   gap: 40px;
   margin-top: 40px;
 }
+
 .family-side {
   border-left: 1px solid #ccc;
   padding-left: 40px;
 }
+
 .family-side:first-child {
   border-left: none;
   border-right: 1px solid #ccc;
@@ -127,13 +149,16 @@ h1, h2, h3 {
   margin-bottom: 30px;
   text-align: left;
 }
+
 .timeline-item .icon {
   width: 50px;
   height: 50px;
 }
+
 .timeline-item h3 {
   margin: 0 0 5px 0;
 }
+
 .timeline-item p {
   margin: 0;
 }
@@ -145,6 +170,7 @@ h1, h2, h3 {
   gap: 10px;
   padding: 20px;
 }
+
 .memories-gallery img {
   width: 100%;
   height: 100%;
@@ -159,7 +185,10 @@ h1, h2, h3 {
   max-width: 500px;
   margin: 30px auto 0;
 }
-.rsvp-form input, .rsvp-form textarea, .rsvp-form select {
+
+.rsvp-form input,
+.rsvp-form textarea,
+.rsvp-form select {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -168,6 +197,7 @@ h1, h2, h3 {
   font-size: 1rem;
   box-sizing: border-box;
 }
+
 .rsvp-form button {
   padding: 15px;
   border-radius: 25px;
@@ -178,17 +208,21 @@ h1, h2, h3 {
   font-weight: bold;
   transition: background-color 0.3s;
 }
+
 .rsvp-form .submit-btn {
   background-color: #f0f0f0;
   color: #333;
 }
+
 .rsvp-form .gifting-btn {
   background-color: #3e4a3a;
   color: white;
 }
+
 .rsvp-form .submit-btn:hover {
   background-color: #ddd;
 }
+
 .rsvp-form .gifting-btn:hover {
   background-color: #52634d;
 }
@@ -212,6 +246,7 @@ h1, h2, h3 {
   align-items: center;
   z-index: 1000;
 }
+
 .modal-content {
   background-color: #f9f8f6;
   padding: 30px;
@@ -221,6 +256,7 @@ h1, h2, h3 {
   position: relative;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
+
 .modal-close-btn {
   position: absolute;
   top: 10px;
@@ -230,18 +266,22 @@ h1, h2, h3 {
   font-size: 1.8rem;
   cursor: pointer;
 }
+
 .modal-content img {
   max-width: 100%;
   margin-top: 20px;
 }
+
 .gifting-modal-content {
   display: flex;
   gap: 20px;
   justify-content: center;
 }
+
 .gifting-modal-content .qr-code-container {
   flex: 1;
 }
+
 .gifting-modal-content img {
   width: 150px;
   height: 150px;

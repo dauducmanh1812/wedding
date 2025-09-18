@@ -109,9 +109,9 @@ function App() {
         <div className="calendar-grid">
           {['MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT', 'SUN'].map(day => <div key={day} className="day-name">{day}</div>)}
           {/* This is a simplified calendar view for May 2025 */}
-          {[...Array(4).keys()].map(i => <div key={`empty-${i}`}></div>)}
+          {[...Array(6).keys()].map(i => <div key={`empty-${i}`}></div>)}
           {[...Array(30).keys()].map(i => (
-            <div key={i} className={`date-number ${i + 1 === 1 ? 'highlight' : ''}`}>{i + 1}</div>
+            <div key={i} className={`date-number ${i + 1 === 2 ? 'highlight' : ''}`}>{i + 1}</div>
           ))}
         </div>
       </section>
