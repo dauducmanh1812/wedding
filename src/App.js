@@ -85,14 +85,14 @@ function App() {
   return (
     <div className="App">
       {/* --- AUDIO --- */}
-      <audio ref={audioRef} src="/audio/background-music.mp3" loop />
+      {/* <audio ref={audioRef} src="/audio/background-music.mp3" loop />
       <button onClick={toggleAudio} style={{ position: 'fixed', top: 20, right: 20, zIndex: 1001 }}>
         {isPlaying ? 'Pause Music' : 'Play Music'}
-      </button>
+      </button> */}
 
       {/* --- HERO SECTION --- */}
       <section className="hero-section">
-        <h1>{siteData.couple.shortName}</h1>
+        <h1 styles="">{siteData.couple.shortName}</h1>
       </section>
 
       {/* --- SAVE THE DATE --- */}
@@ -105,13 +105,13 @@ function App() {
 
       {/* --- CALENDAR --- */}
       <section className="section dark-bg">
-        <p className="script-font">Tháng 5</p>
+        <p className="script-font">Tháng 11</p>
         <div className="calendar-grid">
           {['MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT', 'SUN'].map(day => <div key={day} className="day-name">{day}</div>)}
           {/* This is a simplified calendar view for May 2025 */}
           {[...Array(4).keys()].map(i => <div key={`empty-${i}`}></div>)}
-          {[...Array(31).keys()].map(i => (
-            <div key={i} className={`date-number ${i + 1 === 18 ? 'highlight' : ''}`}>{i + 1}</div>
+          {[...Array(30).keys()].map(i => (
+            <div key={i} className={`date-number ${i + 1 === 1 ? 'highlight' : ''}`}>{i + 1}</div>
           ))}
         </div>
       </section>

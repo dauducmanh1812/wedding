@@ -1,29 +1,29 @@
 {
   "couple": {
-    "groom": "Hồng Quân",
-    "bride": "Vân Anh",
-    "shortName": "Quân & Anh"
+    "groom": "Đức Mạnh",
+    "bride": "Thanh Hằng",
+    "shortName": "Mạnh & Hằng"
   },
   "event": {
-    "date": "18.05.2025",
-    "fullDate": "Chủ Nhật, 18 Tháng 5, Năm 2025",
-    "lunarDate": "Tức ngày 21 tháng 04 năm Ất Tỵ",
+    "date": "02.11.2025",
+    "fullDate": "Chủ Nhật, 09 Tháng 11, Năm 2025",
+    "lunarDate": "Tức ngày 13 tháng 09 năm Ất Tỵ",
     "time": "9 GIỜ 00 PHÚT",
-    "venue": "Trường Mầm non Hoàng Nông",
-    "address": "xóm La Lương - Hoàng Nông - Đại Từ - Thái Nguyên"
+    "venue": "Tư Gia Nhà Trai",
+    "address": "Thôn 84 (Kim Quan), Xã Thạch Thất, Thành Phố Hà Nội"
   },
   "family": {
     "brideSide": {
       "title": "Nhà Gái",
-      "father": "Ông. Đặng Thái Công",
-      "mother": "Bà. Hoàng Mai Hương",
-      "city": "TP. Nha Trang"
+      "father": "Ông. Từ Mạnh Thành",
+      "mother": "Bà. Lương Thu Hiền",
+      "city": "TP. Hà Nội"
     },
     "groomSide": {
       "title": "Nhà Trai",
-      "father": "Ông. Phan Đình Long",
-      "mother": "Bà. Nguyễn Thị Mai",
-      "city": "TP. Đà Nẵng"
+      "father": "Ông. Đỗ Minh Đà",
+      "mother": "Bà. Kiều Thị Ngân",
+      "city": "TP. Hà Nội"
     }
   },
   "timeline": [
@@ -45,17 +45,17 @@
   ],
   "gifting": {
     "account1": {
-      "name": "Le Nguyen Que Nhu",
+      "name": "Từ Thanh Hằng",
       "bank": "Techcombank",
       "number": "19035517277011",
       "qr": "/images/modals/qr-1.png"
     },
     "account2": {
-      "name": "Dang Quang Vu Hoang",
+      "name": "Đỗ Đức Mạnh",
       "bank": "Vietcombank",
       "number": "1037410057",
       "qr": "/images/modals/qr-2.png"
     }
   },
-  "countdownTarget": "2025-05-18T09:00:00"
+  "countdownTarget": "2025-11-02T11:00:00"
 }
