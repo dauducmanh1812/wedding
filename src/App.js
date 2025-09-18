@@ -89,7 +89,6 @@ function App() {
     }
     setIsPlaying(!isPlaying);
   };
-
   return (
     <div className="App">
       {/* --- AUDIO --- */}
@@ -100,23 +99,32 @@ function App() {
 
       {/* --- HERO SECTION --- */}
       <section className="hero-section">
-        <h1 styles="">{siteData.couple.shortName}</h1>
+        <div>
+          <h1 styles="">{siteData.couple.shortName_bride}</h1>
+          <h1>&</h1>
+          <h1 styles="">{siteData.couple.shortName_groom}</h1>
+        </div>
       </section>
 
       {/* --- SAVE THE DATE --- */}
-      <section className="section save-the-date-section">
-        <h2>QUYẾT ĐỊNH BÊN NHAU TRỌN ĐỜI</h2>
-        <p className="script-font">Save the date</p>
+      <section
+        className="section save-the-date-section"
+        style={{
+          backgroundImage: `url('https://w.ladicdn.com/s800x800/6322a62f2dad980013bb5005/fdf-20250420031246-imior.png'), url("/images/save-the-date/section-background.jpg")`,
+        }}
+      >
+        <h2>QUYẾT ĐỊNH BÊN NHAU <br />TRỌN ĐỜI</h2>
+        <p className="script-font monsieur-la-doulaise-regular">Save the date</p>
         <p className="date">{siteData.event.date}</p>
         <img src="/images/save-the-date/couple-1.jpg" alt="Couple" />
       </section>
 
       {/* --- CALENDAR --- */}
-      <section className="section dark-bg">
-        <p className="script-font">Tháng 11</p>
+      <section className="section section-calendar dark-bg">
+        <p className="script-font monsieur-la-doulaise-regular">Tháng 11</p>
         <div className="calendar-grid">
           {["MON", "TUE", "WED", "THUR", "FRI", "SAT", "SUN"].map((day) => (
-            <div key={day} className="day-name">
+            <div key={day} className="day-name open-sans-light">
               {day}
             </div>
           ))}

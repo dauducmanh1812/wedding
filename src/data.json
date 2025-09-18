@@ -2,7 +2,9 @@
   "couple": {
     "groom": "Đức Mạnh",
     "bride": "Thanh Hằng",
-    "shortName": "Mạnh & Hằng"
+    "shortName": "Mạnh & Hằng",
+    "shortName_groom": "Mạnh",
+    "shortName_bride": "Hằng"
   },
   "event": {
     "date": "02.11.2025",

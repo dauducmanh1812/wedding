@@ -1,4 +1,19 @@
-/* General Styling */
+.monsieur-la-doulaise-regular {
+  font-family: "Monsieur La Doulaise", cursive !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.open-sans-light {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
 body {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
@@ -33,7 +48,7 @@ h3 {
 }
 
 .script-font {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Imperial Script', cursive;
   font-size: 2.5rem;
   margin: 10px 0;
 }
@@ -58,37 +73,35 @@ h3 {
 
 /* Save the Date Section */
 .save-the-date-section {
-  background-image: url('https://w.ladicdn.com/s800x800/6322a62f2dad980013bb5005/fdf-20250420031246-imior.png');
-  /* position: absolute; */
-  /* width: 480.2px; */
-  /* height: 480.2px; */
-  background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
   background-attachment: scroll;
-  background-origin: content-box;
   margin: 0 auto;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .save-the-date-section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 2px;
 }
 
 .save-the-date-section .date {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: lighter;
   margin-top: 15px;
 }
 
 .save-the-date-section img {
   max-width: 80%;
-  margin-top: 40px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Calendar Section */
+.section-calendar {
+  padding-left: 33px !important;
+  padding-right: 33px !important;
+}
+
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -102,7 +115,11 @@ h3 {
 }
 
 .calendar-grid .day-name {
-  font-weight: bold;
+  font-weight: normal;
+}
+
+.calendar-grid .date-number {
+  font-size: 15px;
 }
 
 .calendar-grid .date-number.highlight {
@@ -113,6 +130,7 @@ h3 {
 
 /* Simple heart, can be improved with SVG */
 .calendar-grid .date-number.highlight::after {
+  /* background-image: url("https://w.ladicdn.com/s350x350/6322a62f2dad980013bb5005/png-clipart-computer-icons-arrow-miscellaneous-angle-20250323082200-ub0dm.png"); */
   content: '♥';
   position: absolute;
   top: -5px;
@@ -339,7 +357,7 @@ h3 {
   }
 
   .script-font {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 
   .save-the-date-section h2 {
@@ -347,7 +365,7 @@ h3 {
   }
 
   .save-the-date-section .date {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .calendar-grid {
