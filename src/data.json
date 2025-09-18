@@ -9,7 +9,7 @@
     "fullDate": "Chủ Nhật, 09 Tháng 11, Năm 2025",
     "lunarDate": "Tức ngày 13 tháng 09 năm Ất Tỵ",
     "time": "9 GIỜ 00 PHÚT",
-    "venue": "Tư Gia Nhà Trai",
+    "venue": "Tư Gia Nhà Gái",
     "address": "Thôn 84 (Kim Quan), Xã Thạch Thất, Thành Phố Hà Nội"
   },
   "family": {
@@ -57,5 +57,9 @@
       "qr": "/images/modals/qr-2.png"
     }
   },
-  "countdownTarget": "2025-11-02T11:00:00"
+  "countdownTarget": "2025-11-02T11:00:00",
+  "thankYou": {
+    "message": "Cảm ơn bạn đã dành tình cảm cho chúng mình! Sự hiện diện của bạn chính là món quà ý nghĩa nhất, và chúng mình vô cùng trân quý khi được cùng bạn chia sẻ niềm hạnh phúc trong ngày trọng đại này.",
+    "signature": "Thank you!"
+  }
 }

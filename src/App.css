@@ -93,7 +93,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 10px;
-  max-width: 400px;
+  max-width: 100%;
   margin: 20px auto 0;
 }
 
@@ -231,6 +231,48 @@ h3 {
 .countdown {
   font-size: 3rem;
   letter-spacing: 10px;
+}
+
+/* Final Thank You Section */
+.thank-you-section {
+  position: relative;
+  padding: 100px 20px;
+  background-image: url('/images/closing/thank-you-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add a dark overlay for better text readability */
+.thank-you-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.thank-you-content {
+  position: relative; /* To ensure text is on top of the overlay */
+  z-index: 1;
+  max-width: 700px;
+}
+
+.thank-you-content p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.thank-you-content .script-font {
+  font-size: 3.5rem;
+  margin-top: 20px;
 }
 
 /* Modals */
