@@ -1,22 +1,51 @@
+/* Fonts */
 .monsieur-la-doulaise-regular {
   font-family: "Monsieur La Doulaise", cursive !important;
   font-weight: 400;
   font-style: normal;
 }
-
 .open-sans-light {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
+@font-face {
+  font-family: "MUZUViWSVAtQVJDSVRUWUEtQkVHQVRSSSPVEY";
+  src: url("https://w.ladicdn.com/6322a62f2dad980013bb5005/1ftv-vip-arcittya-begatri-20250323075635-w9isj.otf");
+}
+/* Fonts */
+
+/* Transition + Animation */
+.element-transtion {
+  transition: all 150ms linear 0s;
+  animation-name: fadeInUp;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* Transition + Animation */
 
 body {
   margin: 0;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   background-color: #f9f8f6;
   color: rgb(49, 81, 37);
   text-align: center;
@@ -48,16 +77,16 @@ h3 {
 }
 
 .script-font {
-  font-family: 'Imperial Script', cursive;
+  font-family: "Imperial Script", cursive;
   font-size: 2.5rem;
   margin: 10px 0;
 }
 
-/* Hero Section */
-.hero-section {
+/* 01_Hero Section */
+.section-hero {
   position: relative;
   height: 100vh;
-  background-image: url('https://images.pexels.com/photos/33625406/pexels-photo-33625406.jpeg');
+  background-image: url("https://images.pexels.com/photos/33625406/pexels-photo-33625406.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -66,13 +95,13 @@ h3 {
   color: white;
 }
 
-.hero-section h1 {
+.section-hero h1 {
   font-size: 6rem;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Save the Date Section */
-.save-the-date-section {
+/* 02_Save the Date Section */
+.section-save-the-date {
   background-position: left top;
   background-size: cover;
   background-attachment: scroll;
@@ -80,29 +109,29 @@ h3 {
   pointer-events: auto;
 }
 
-.save-the-date-section h2 {
+.section-save-the-date h2 {
   font-size: 2.5rem;
   letter-spacing: 2px;
 }
 
-.save-the-date-section .date {
+.section-save-the-date .date {
   font-size: 2.5rem;
   font-weight: lighter;
   margin-top: 15px;
 }
 
-.save-the-date-section img {
+.section-save-the-date img {
   max-width: 80%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Calendar Section */
+/* 03_Calendar Section */
 .section-calendar {
   padding-left: 33px !important;
   padding-right: 33px !important;
 }
 
-.calendar-grid {
+.section-calendar .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 10px;
@@ -110,41 +139,169 @@ h3 {
   margin: 20px auto 0;
 }
 
-.calendar-grid div {
+.section-calendar .calendar-grid div {
   padding: 10px;
 }
 
-.calendar-grid .day-name {
+.section-calendar .calendar-grid .day-name {
   font-weight: normal;
 }
 
-.calendar-grid .date-number {
+.section-calendar .calendar-grid .date-number {
   font-size: 15px;
 }
 
-.calendar-grid .date-number.highlight {
+.section-calendar .calendar-grid .date-number.highlight {
   border: 2px solid #f9f8f6;
   border-radius: 50%;
   position: relative;
 }
 
-/* Simple heart, can be improved with SVG */
-.calendar-grid .date-number.highlight::after {
+.section-calendar .calendar-grid .date-number.highlight::after {
   /* background-image: url("https://w.ladicdn.com/s350x350/6322a62f2dad980013bb5005/png-clipart-computer-icons-arrow-miscellaneous-angle-20250323082200-ub0dm.png"); */
-  content: '♥';
+  content: "♥";
   position: absolute;
   top: -5px;
   right: -5px;
   font-size: 1.2rem;
 }
 
+/* 04_Invitation Section */
+.section-invitation {
+  background-position: left top;
+  background-size: cover;
+  background-attachment: scroll;
+  margin: 0 auto;
+  pointer-events: auto;
+}
+
+.section-invitation h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: rgb(49, 81, 37);
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.section-invitation h1 {
+  font-size: 3.5rem;
+}
+
+.section-invitation .text-and {
+  font-family: MUZUViWSVAtQVJDSVRUWUEtQkVHQVRSSSPVEY;
+  margin: 0;
+  font-size: 7rem;
+  opacity: 0.4;
+  position: absolute;
+  left: 50%;
+}
+.section-invitation .text-and:hover {
+  opacity: 1;
+}
+
+.section-invitation .photo-gallery-container {
+  position: relative;
+  width: 100%;
+  min-height: 450px; /* Adjust height as needed to contain the photos */
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-invitation .photo-gallery-container .polaroid {
+  position: absolute;
+  background-color: #fff;
+  padding: 15px 15px 70px 15px; /* Extra padding at the bottom for the classic look */
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15);
+  width: 280px; /* Fixed width for the polaroid */
+  transition: transform 0.3s ease-in-out;
+}
+.section-invitation .photo-gallery-container .polaroid:hover {
+  transform: scale(1.05) rotate(0deg) !important; /* Enlarge and straighten on hover */
+  z-index: 10; /* Bring the hovered photo to the front */
+}
+.section-invitation .photo-gallery-container .polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.section-invitation .photo-gallery-container .photo-one {
+  transform: rotate(-10deg);
+  z-index: 1;
+  top: 20px;
+  left: 10%;
+}
+
+/* Specific position and rotation for the second photo (bride) */
+.section-invitation .photo-gallery-container .photo-two {
+  transform: rotate(8deg);
+  z-index: 2; /* Ensures this photo is on top */
+  top: 40px;
+  right: 10%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .section-invitation .photo-gallery-container { /* Corrected the duplicated class */
+    min-height: 350px;
+  }
+
+  .section-invitation .photo-gallery-container .polaroid {
+    width: 300px; /* Make photos smaller */
+    padding: 10px 10px 50px 10px;
+  }
+
+  .section-invitation .photo-gallery-container .photo-one {
+    left: 5%;
+  }
+
+  .section-invitation .photo-gallery-container .photo-two {
+    right: 5%;
+    top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-invitation .photo-gallery-container { /* Corrected the duplicated class */
+    /* Stack them more vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static; /* Remove absolute positioning context */
+    min-height: auto;
+  }
+
+  .section-invitation .photo-gallery-container .polaroid {
+    position: static; /* Remove absolute positioning */
+    margin-bottom: -100px; /* Overlap them vertically */
+    width: 70%;
+    max-width: 250px;
+  }
+
+  .section-invitation .photo-gallery-container .photo-one {
+    transform: rotate(-5deg);
+    margin-top: 20px;
+  }
+
+  .section-invitation .photo-gallery-container .photo-two {
+    transform: rotate(5deg);
+  }
+
+  .section-invitation .photo-gallery-container .polaroid:hover {
+    transform: scale(1.05) !important;
+  }
+}
 
 /* Family Section */
 .family-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
   margin-top: 40px;
+  flex-direction: row;
 }
 
 .family-side {
@@ -157,6 +314,12 @@ h3 {
   border-right: 1px solid #ccc;
   padding-left: 0;
   padding-right: 40px;
+}
+.family-side:last-child {
+  border-left: 1px solid #ccc;
+  border-right: none;
+  padding-left: 40px;
+  padding-right: 0;
 }
 
 /* Timeline Section */
@@ -266,13 +429,13 @@ h3 {
 
 /* Add a dark overlay for better text readability */
 .thank-you-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4); 
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .thank-you-content {
@@ -352,7 +515,7 @@ h3 {
     padding: 40px 15px;
   }
 
-  .hero-section h1 {
+  .section-hero h1 {
     font-size: 3rem;
   }
 
@@ -360,11 +523,11 @@ h3 {
     font-size: 3rem;
   }
 
-  .save-the-date-section h2 {
+  .section-save-the-date h2 {
     font-size: 1.5rem;
   }
 
-  .save-the-date-section .date {
+  .section-save-the-date .date {
     font-size: 2.5rem;
   }
 
@@ -375,11 +538,6 @@ h3 {
 
   .calendar-grid div {
     padding: 5px;
-  }
-
-  .family-container {
-    flex-direction: column;
-    gap: 20px;
   }
 
   .family-side {

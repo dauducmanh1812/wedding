@@ -82,44 +82,45 @@ function App() {
 
   // Audio toggle handler
   const toggleAudio = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
+    if (isPlaying === false) {
       audioRef.current.play();
+      setIsPlaying(true);
     }
-    setIsPlaying(!isPlaying);
   };
-  return (
-    <div className="App">
-      {/* --- AUDIO --- */}
-      {/* <audio ref={audioRef} src="/audio/background-music.mp3" loop />
-      <button onClick={toggleAudio} style={{ position: 'fixed', top: 20, right: 20, zIndex: 1001 }}>
-        {isPlaying ? 'Pause Music' : 'Play Music'}
-      </button> */}
 
-      {/* --- HERO SECTION --- */}
-      <section className="hero-section">
-        <div>
+  return (
+    <div className="App" onClick={toggleAudio}>
+      {/* --- AUDIO --- */}
+      <audio ref={audioRef} src="/audio/background-music.mp3" loop />
+
+      {/* --- 01_HERO SECTION --- */}
+      <section className="section section-hero">
+        <div class="element-transtion">
           <h1 styles="">{siteData.couple.shortName_bride}</h1>
           <h1>&</h1>
           <h1 styles="">{siteData.couple.shortName_groom}</h1>
         </div>
       </section>
 
-      {/* --- SAVE THE DATE --- */}
+      {/* --- 02_SAVE THE DATE --- */}
       <section
-        className="section save-the-date-section"
+        className="section section-save-the-date"
         style={{
-          backgroundImage: `url('https://w.ladicdn.com/s800x800/6322a62f2dad980013bb5005/fdf-20250420031246-imior.png'), url("/images/save-the-date/section-background.jpg")`,
+          backgroundImage: `url('https://w.ladicdn.com/s800x800/6322a62f2dad980013bb5005/fdf-20250420031246-imior.png'), url("/images/background.jpg")`,
         }}
       >
-        <h2>QUYẾT ĐỊNH BÊN NHAU <br />TRỌN ĐỜI</h2>
-        <p className="script-font monsieur-la-doulaise-regular">Save the date</p>
+        <h2>
+          QUYẾT ĐỊNH BÊN NHAU <br />
+          TRỌN ĐỜI
+        </h2>
+        <p className="script-font monsieur-la-doulaise-regular">
+          Save the date
+        </p>
         <p className="date">{siteData.event.date}</p>
         <img src="/images/save-the-date/couple-1.jpg" alt="Couple" />
       </section>
 
-      {/* --- CALENDAR --- */}
+      {/* --- 03_CALENDAR --- */}
       <section className="section section-calendar dark-bg">
         <p className="script-font monsieur-la-doulaise-regular">Tháng 11</p>
         <div className="calendar-grid">
@@ -143,16 +144,40 @@ function App() {
         </div>
       </section>
 
-      {/* --- INVITATION --- */}
-      <section className="section">
-        <h2>THÂN MỜI TỚI DỰ LỄ CƯỚI THÂN MẬT CỦA CHÚNG TÔI</h2>
+      {/* --- 04_INVITATION --- */}
+      <section
+        className="section section-invitation"
+        style={{
+          backgroundImage: `url("/images/background2.jpg")`,
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
+        <div>
+          <h2>
+            THÂN MỜI TỚI DỰ <br /> LỄ CƯỚI CỦA CHÚNG TÔI
+          </h2>
+        </div>
         {/* Bride and Groom Info */}
-        <h1 className="script-font" style={{ fontSize: "3.5rem" }}>
-          {siteData.couple.bride}
-        </h1>
-        <h1 className="script-font" style={{ fontSize: "3.5rem" }}>
-          {siteData.couple.groom}
-        </h1>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <h1 class="text-and">{"&".toUpperCase()}</h1>
+          <h1 style={{ margin: 15 }}>{siteData.couple.bride.toUpperCase()}</h1>
+          <h1 style={{ margin: 15 }}>{siteData.couple.groom.toUpperCase()}</h1>
+        </div>
+
+        {/* Bride and Groom Image */}
+        <div className="photo-gallery-container">
+          {/* Groom's Photo */}
+          <div className="polaroid photo-one">
+            <img src="/images/invitation/qr-1.png" alt="Groom in a grey suit" />
+          </div>
+
+          {/* Bride's Photo */}
+          <div className="polaroid photo-two">
+            <img src="/images/invitation/qr-1.png" alt="Bride with a veil" />
+          </div>
+        </div>
+
         {/* Family Info */}
         <div className="family-container">
           <div className="family-side">
