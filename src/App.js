@@ -150,7 +150,7 @@ function App() {
         style={{
           backgroundImage: `url("/images/background2.jpg")`,
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <div>
@@ -181,24 +181,66 @@ function App() {
         {/* Family Info */}
         <div className="family-container">
           <div className="family-side">
-            <h3>{siteData.family.brideSide.title}</h3>
-            <p>{siteData.family.brideSide.father}</p>
-            <p>{siteData.family.brideSide.mother}</p>
-            <p>{siteData.family.brideSide.city}</p>
+            <h1 class="family-title">{siteData.family.brideSide.title}</h1>
+            <h2>
+              {siteData.family.brideSide.father} <br />
+              {siteData.family.brideSide.mother} <br />
+              {siteData.family.brideSide.city}
+            </h2>
           </div>
           <div className="family-side">
-            <h3>{siteData.family.groomSide.title}</h3>
-            <p>{siteData.family.groomSide.father}</p>
-            <p>{siteData.family.groomSide.mother}</p>
-            <p>{siteData.family.groomSide.city}</p>
+            <h1 class="family-title">{siteData.family.groomSide.title}</h1>
+            <h2>
+              {siteData.family.groomSide.father}
+              <br />
+              {siteData.family.groomSide.mother}
+              <br />
+              {siteData.family.groomSide.city}
+            </h2>
           </div>
         </div>
       </section>
 
-      {/* --- EVENT DETAILS --- */}
-      <section className="section">
-        <h2>TIỆC NHÀ GÁI ĐƯỢC TỔ CHỨC</h2>
-        <h3>VÀO LÚC {siteData.event.time}</h3>
+      {/* --- 05_EVENT DETAILS --- */}
+      <section
+        className="section section-event-details"
+        style={{
+          paddingTop: 0,
+          backgroundImage: `url("/images/background2.jpg")`,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <img
+          src="/images/event-details/icon1.png"
+          width={250}
+          alt="Event Details Icon1"
+        />
+        <h1>
+          TIỆC NHÀ GÁI ĐƯỢC TỔ CHỨC <br />
+          VÀO LÚC {siteData.event.time}
+        </h1>
+
+        <h1>{siteData.event.dining.weekday}</h1>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: "20px"
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <h1 class="month">{siteData.event.dining.month}</h1>
+          </div>
+          <h1 class="day">{siteData.event.dining.day}</h1>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <h1 class="year">{siteData.event.dining.year}</h1>
+          </div>
+        </div>
+
         <h2>{siteData.event.fullDate}</h2>
         <p>({siteData.event.lunarDate})</p>
         <h3>{siteData.event.venue}</h3>

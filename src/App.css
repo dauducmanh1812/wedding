@@ -179,13 +179,17 @@ h3 {
   font-size: 2rem;
   line-height: 1.5;
   color: rgb(49, 81, 37);
-  text-transform: uppercase;
   letter-spacing: 0px;
   text-align: center;
+  margin: 0 0.4em;
 }
 
 .section-invitation h1 {
   font-size: 3.5rem;
+}
+.section-invitation h1.family-title {
+  text-transform: uppercase;
+  margin: 0 0.4em;
 }
 
 .section-invitation .text-and {
@@ -246,7 +250,8 @@ h3 {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-  .section-invitation .photo-gallery-container { /* Corrected the duplicated class */
+  .section-invitation .photo-gallery-container {
+    /* Corrected the duplicated class */
     min-height: 350px;
   }
 
@@ -266,7 +271,8 @@ h3 {
 }
 
 @media (max-width: 480px) {
-  .section-invitation .photo-gallery-container { /* Corrected the duplicated class */
+  .section-invitation .photo-gallery-container {
+    /* Corrected the duplicated class */
     /* Stack them more vertically */
     display: flex;
     flex-direction: column;
@@ -297,29 +303,40 @@ h3 {
 }
 
 /* Family Section */
-.family-container {
+.section-invitation .family-container {
   display: flex;
   justify-content: center;
   margin-top: 40px;
   flex-direction: row;
 }
 
-.family-side {
-  border-left: 1px solid #ccc;
-  padding-left: 40px;
-}
-
-.family-side:first-child {
+.section-invitation .family-side:first-child {
   border-left: none;
-  border-right: 1px solid #ccc;
+  border-right: 2px solid rgb(49, 81, 37);
   padding-left: 0;
   padding-right: 40px;
 }
-.family-side:last-child {
-  border-left: 1px solid #ccc;
+.section-invitation .family-side:last-child {
+  border-left: 2px solid rgb(49, 81, 37);
   border-right: none;
   padding-left: 40px;
   padding-right: 0;
+}
+
+/* 05_EVENT DETAILS */
+.section-event-details h1 {
+  font-size: 2rem;
+}
+.section-event-details h1.day {
+  margin: 0;
+  font-size: 5rem;
+}
+.section-event-details h1.month,
+.section-event-details h1.year {
+  line-height: 60px;
+  margin: 20px 0;
+  border-bottom: 2px solid rgb(49, 81, 37);
+  border-top: 2px solid rgb(49, 81, 37);
 }
 
 /* Timeline Section */
