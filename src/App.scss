@@ -4,6 +4,11 @@
   src: url("https://w.ladicdn.com/6322a62f2dad980013bb5005/1ftv-vip-arcittya-begatri-20250323075635-w9isj.otf");
 }
 
+@font-face {
+  font-family: "MUZUViWSVAtSEFTVEVHSSPVEY";
+  src: url("https://w.ladicdn.com/6322a62f2dad980013bb5005/1ftv-vip-hastegi-20250323075635-ymzdv.otf");
+}
+
 .monsieur-la-doulaise-regular {
   font-family: "Monsieur La Doulaise", cursive !important;
   font-weight: 400;
@@ -67,12 +72,16 @@ body {
 .wedding-invitation {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  .wedding-invitation-section {
+    max-width: 768px;
+    min-width: 480px;
+  }
 }
 
 .section {
   padding: 60px 20px;
-  max-width: 768px;
-  min-width: 480px;
   margin: 0 auto;
 
   &.section-secondary {
@@ -262,37 +271,37 @@ h5 {
   }
 }
 
-@media (max-width: 480px) {
-  .section-invitation .photo-gallery-container {
-    /* Corrected the duplicated class */
-    /* Stack them more vertically */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: static; /* Remove absolute positioning context */
-    min-height: auto;
-  }
+// @media (max-width: 480px) {
+//   .section-invitation .photo-gallery-container {
+//     /* Corrected the duplicated class */
+//     /* Stack them more vertically */
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     position: static; /* Remove absolute positioning context */
+//     min-height: auto;
+//   }
 
-  .section-invitation .photo-gallery-container .polaroid {
-    position: static; /* Remove absolute positioning */
-    margin-bottom: -100px; /* Overlap them vertically */
-    width: 70%;
-    max-width: 250px;
-  }
+//   .section-invitation .photo-gallery-container .polaroid {
+//     position: static; /* Remove absolute positioning */
+//     margin-bottom: -100px; /* Overlap them vertically */
+//     width: 70%;
+//     max-width: 250px;
+//   }
 
-  .section-invitation .photo-gallery-container .photo-one {
-    transform: rotate(-5deg);
-    margin-top: 20px;
-  }
+//   .section-invitation .photo-gallery-container .photo-one {
+//     transform: rotate(-5deg);
+//     margin-top: 20px;
+//   }
 
-  .section-invitation .photo-gallery-container .photo-two {
-    transform: rotate(5deg);
-  }
+//   .section-invitation .photo-gallery-container .photo-two {
+//     transform: rotate(5deg);
+//   }
 
-  .section-invitation .photo-gallery-container .polaroid:hover {
-    transform: scale(1.05) !important;
-  }
-}
+//   .section-invitation .photo-gallery-container .polaroid:hover {
+//     transform: scale(1.05) !important;
+//   }
+// }
 
 /* Family Section */
 .section-invitation .family-container {
@@ -513,85 +522,85 @@ h5 {
   height: 150px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .section {
-    padding: 40px 15px;
-  }
+// /* Mobile Responsiveness */
+// @media (max-width: 768px) {
+//   .section {
+//     padding: 40px 15px;
+//   }
 
-  .section-hero h1 {
-    font-size: 3rem;
-  }
+//   .section-hero h1 {
+//     font-size: 3rem;
+//   }
 
-  .section-save-the-date h2 {
-    font-size: 1.5rem;
-  }
+//   .section-save-the-date h2 {
+//     font-size: 1.5rem;
+//   }
 
-  .section-save-the-date .date {
-    font-size: 2.5rem;
-  }
+//   .section-save-the-date .date {
+//     font-size: 2.5rem;
+//   }
 
-  .calendar-grid {
-    font-size: 0.8rem;
-    gap: 5px;
-  }
+//   .calendar-grid {
+//     font-size: 0.8rem;
+//     gap: 5px;
+//   }
 
-  .calendar-grid div {
-    padding: 5px;
-  }
+//   .calendar-grid div {
+//     padding: 5px;
+//   }
 
-  .family-side {
-    border-left: none;
-    border-right: none;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-  }
+//   .family-side {
+//     border-left: none;
+//     border-right: none;
+//     padding-left: 0;
+//     padding-right: 0;
+//     text-align: center;
+//   }
 
-  .timeline-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
+//   .timeline-item {
+//     flex-direction: column;
+//     text-align: center;
+//     gap: 10px;
+//   }
 
-  .rsvp-form {
-    max-width: 100%;
-    gap: 10px;
-  }
+//   .rsvp-form {
+//     max-width: 100%;
+//     gap: 10px;
+//   }
 
-  .rsvp-form input,
-  .rsvp-form textarea,
-  .rsvp-form select {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
+//   .rsvp-form input,
+//   .rsvp-form textarea,
+//   .rsvp-form select {
+//     padding: 10px;
+//     font-size: 0.9rem;
+//   }
 
-  .rsvp-form button {
-    padding: 12px;
-    font-size: 1rem;
-  }
+//   .rsvp-form button {
+//     padding: 12px;
+//     font-size: 1rem;
+//   }
 
-  .countdown {
-    font-size: 2rem;
-    letter-spacing: 5px;
-  }
+//   .countdown {
+//     font-size: 2rem;
+//     letter-spacing: 5px;
+//   }
 
-  .thank-you-content p {
-    font-size: 1.2rem;
-  }
+//   .thank-you-content p {
+//     font-size: 1.2rem;
+//   }
 
-  .modal-content {
-    width: 95%;
-    padding: 20px;
-  }
+//   .modal-content {
+//     width: 95%;
+//     padding: 20px;
+//   }
 
-  .gifting-modal-content {
-    flex-direction: column;
-    gap: 15px;
-  }
+//   .gifting-modal-content {
+//     flex-direction: column;
+//     gap: 15px;
+//   }
 
-  .gifting-modal-content img {
-    width: 120px;
-    height: 120px;
-  }
-}
+//   .gifting-modal-content img {
+//     width: 120px;
+//     height: 120px;
+//   }
+// }
