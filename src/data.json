@@ -10,16 +10,16 @@
     "dining": {
       "weekday": "THỨ BẢY",
       "month": "THÁNG 11",
-      "day": "02",
+      "day": "01",
       "year": "NĂM 2025",
       "lunarDate": "Tức ngày 12 tháng 09 năm Ất Tỵ"
     },
     "date": "01.11.2025",
-    "fullDate": "Thứ bảy, 01 Tháng 11, Năm 2025",
-    "lunarDate": "Tức ngày 13 tháng 09 năm Ất Tỵ",
+    "lunarDate": "(Tức ngày 12 tháng 09 năm Ất Tỵ)",
     "time": "17 GIỜ 00 PHÚT",
-    "venue": "Tư Gia Nhà Gái",
-    "address": "Thôn 84 (Kim Quan), Xã Thạch Thất, Thành Phố Hà Nội"
+    "venue": "Nhà Văn Hóa Huyện Thường Tín",
+    "address": "Đường Tỉnh 427B, Xã Thường Tín, Thành Phố Hà Nội",
+    "gg_address": "https://maps.app.goo.gl/sBk6ax5ciSXHt93M9"
   },
   "family": {
     "brideSide": {

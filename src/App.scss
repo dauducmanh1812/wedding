@@ -11,25 +11,32 @@
 
 .monsieur-la-doulaise-regular {
   font-family: "Monsieur La Doulaise", cursive !important;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 .open-sans-light {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
 .cormorant-garamond {
   font-family: "Cormorant Garamond", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
 .arcittya-begatri {
   font-family: MUZUViWSVAtQVJDSVRUWUEtQkVHQVRSSSPVEY;
-  font-weight: 400;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.eb-garamond-regular {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-style: normal;
 }
 /* Fonts */
@@ -56,6 +63,43 @@
     transform: translateY(0);
   }
 }
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
 /* Transition + Animation */
 
 :root {
@@ -75,8 +119,8 @@ body {
   align-items: center;
 
   .wedding-invitation-section {
+    width: 100%;
     max-width: 768px;
-    min-width: 480px;
   }
 }
 
@@ -102,70 +146,10 @@ h5 {
 @import "./assets/styles/01-hero.scss";
 
 /* 02_Save the Date Section */
-.section-save-the-date {
-  background-position: left top;
-  background-size: cover;
-  background-attachment: scroll;
-  margin: 0 auto;
-  pointer-events: auto;
-}
-
-.section-save-the-date h2 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-}
-
-.section-save-the-date .date {
-  font-size: 2.5rem;
-  font-weight: lighter;
-  margin-top: 15px;
-}
-
-.section-save-the-date img {
-  max-width: 80%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
+@import "./assets/styles/02-save-the-date.scss";
 
 /* 03_Calendar Section */
-.section-calendar {
-  padding-left: 33px !important;
-  padding-right: 33px !important;
-}
-
-.section-calendar .calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-  max-width: 100%;
-  margin: 20px auto 0;
-}
-
-.section-calendar .calendar-grid div {
-  padding: 10px;
-}
-
-.section-calendar .calendar-grid .day-name {
-  font-weight: normal;
-}
-
-.section-calendar .calendar-grid .date-number {
-  font-size: 15px;
-}
-
-.section-calendar .calendar-grid .date-number.highlight {
-  border: 2px solid #f9f8f6;
-  border-radius: 50%;
-  position: relative;
-}
-
-.section-calendar .calendar-grid .date-number.highlight::after {
-  /* background-image: url("https://w.ladicdn.com/s350x350/6322a62f2dad980013bb5005/png-clipart-computer-icons-arrow-miscellaneous-angle-20250323082200-ub0dm.png"); */
-  content: "♥";
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  font-size: 1.2rem;
-}
+@import "./assets/styles/03-calendar.scss";
 
 /* 04_Invitation Section */
 .section-invitation {
@@ -249,27 +233,27 @@ h5 {
   right: 10%;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  .section-invitation .photo-gallery-container {
-    /* Corrected the duplicated class */
-    min-height: 350px;
-  }
+// /* Responsive adjustments for smaller screens */
+// @media (max-width: 768px) {
+//   .section-invitation .photo-gallery-container {
+//     /* Corrected the duplicated class */
+//     min-height: 350px;
+//   }
 
-  .section-invitation .photo-gallery-container .polaroid {
-    width: 300px; /* Make photos smaller */
-    padding: 10px 10px 50px 10px;
-  }
+//   .section-invitation .photo-gallery-container .polaroid {
+//     width: 300px; /* Make photos smaller */
+//     padding: 10px 10px 50px 10px;
+//   }
 
-  .section-invitation .photo-gallery-container .photo-one {
-    left: 5%;
-  }
+//   .section-invitation .photo-gallery-container .photo-one {
+//     left: 5%;
+//   }
 
-  .section-invitation .photo-gallery-container .photo-two {
-    right: 5%;
-    top: 60px;
-  }
-}
+//   .section-invitation .photo-gallery-container .photo-two {
+//     right: 5%;
+//     top: 60px;
+//   }
+// }
 
 // @media (max-width: 480px) {
 //   .section-invitation .photo-gallery-container {
@@ -325,20 +309,7 @@ h5 {
 }
 
 /* 05_EVENT DETAILS */
-.section-event-details h1 {
-  font-size: 2rem;
-}
-.section-event-details h1.day {
-  margin: 0;
-  font-size: 5rem;
-}
-.section-event-details h1.month,
-.section-event-details h1.year {
-  line-height: 60px;
-  margin: 20px 0;
-  border-bottom: 2px solid var(--color-primary);
-  border-top: 2px solid var(--color-primary);
-}
+@import "./assets/styles/05-event-details.scss";
 
 /* Timeline Section */
 .timeline-item {

@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import "./App.scss";
 import siteData from "./data.json";
 
+import eventDetailsIcon2 from "./assets/images/event-details/icon2.png";
+import eventDetailsIcon3 from "./assets/images/event-details/icon3.png";
+
 function App() {
   // State for Modals
   const [showThankYouModal, setShowThankYouModal] = useState(false);
@@ -95,21 +98,18 @@ function App() {
 
       <div className="wedding-invitation-section">
         {/* --- 01_HERO --- */}
-        <section className="section section-hero">
+        <div className="section section-hero">
           <div class="element-transtion arcittya-begatri">
             <h1>{siteData.couple.shortName_bride.toUpperCase()}</h1>
             <div class="section-hero_groom">
-              <span>&</span> <h1>{siteData.couple.shortName_groom.toUpperCase()}</h1>
+              <span>&</span>{" "}
+              <h1>{siteData.couple.shortName_groom.toUpperCase()}</h1>
             </div>
           </div>
-        </section>
+        </div>
+
         {/* --- 02_SAVE THE DATE --- */}
-        <section
-          className="section section-save-the-date"
-          style={{
-            backgroundImage: `url('https://w.ladicdn.com/s800x800/6322a62f2dad980013bb5005/fdf-20250420031246-imior.png'), url("/images/background.jpg")`,
-          }}
-        >
+        <div className="section section-save-the-date">
           <h2>
             QUYẾT ĐỊNH BÊN NHAU <br />
             TRỌN ĐỜI
@@ -117,9 +117,10 @@ function App() {
           <p className="monsieur-la-doulaise-regular">Save the date</p>
           <p className="date">{siteData.event.date}</p>
           <img src="/images/save-the-date/couple-1.jpg" alt="Couple" />
-        </section>
+        </div>
+
         {/* --- 03_CALENDAR --- */}
-        <section className="section section-calendar section-secondary">
+        <div className="section section-calendar section-secondary">
           <p className="monsieur-la-doulaise-regular">Tháng 11</p>
           <div className="calendar-grid">
             {["MON", "TUE", "WED", "THUR", "FRI", "SAT", "SUN"].map((day) => (
@@ -134,15 +135,16 @@ function App() {
             {[...Array(30).keys()].map((i) => (
               <div
                 key={i}
-                className={`date-number ${i + 1 === 2 ? "highlight" : ""}`}
+                className={`date-number ${i + 1 === 1 ? "highlight" : ""}`}
               >
                 {i + 1}
               </div>
             ))}
           </div>
-        </section>
+        </div>
+
         {/* --- 04_INVITATION --- */}
-        <section
+        <div
           className="section section-invitation"
           style={{
             backgroundImage: `url("/images/background2.jpg")`,
@@ -203,9 +205,10 @@ function App() {
               </h2>
             </div>
           </div>
-        </section>
+        </div>
+
         {/* --- 05_EVENT DETAILS --- */}
-        <section
+        <div
           className="section section-event-details"
           style={{
             paddingTop: 0,
@@ -244,20 +247,36 @@ function App() {
             </div>
           </div>
 
-          <h2>{siteData.event.fullDate}</h2>
-          <p>({siteData.event.lunarDate})</p>
-          <h3>{siteData.event.venue}</h3>
-          <p>{siteData.event.address}</p>
+          <h2 style={{ margin: "10px" }}>{siteData.event.lunarDate}</h2>
+
+          <img
+            style={{ margin: "20px" }}
+            src={eventDetailsIcon2}
+            width={100}
+            alt="Event Details Icon2"
+          />
+
+          <h1 style={{ margin: "10px" }}>
+            {siteData.event.venue.toUpperCase()}
+          </h1>
+          <p
+            class="eb-garamond-regular"
+            style={{ fontSize: "20px", margin: "10px" }}
+          >
+            Địa chỉ: {siteData.event.address}
+          </p>
+
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-              siteData.event.address
-            )}`}
+            className="map-guide"
+            href={siteData.event.gg_address}
             target="_blank"
             rel="noopener noreferrer"
           >
-            CHỈ ĐƯỜNG
+            <img src={eventDetailsIcon3} width={40} height={40} alt="Event Details Icon2" />
+            <h1>CHỈ ĐƯỜNG</h1>
           </a>
-        </section>
+        </div>
+
         {/* --- TIMELINE --- */}
         <section className="section">
           <h2>Timeline</h2>

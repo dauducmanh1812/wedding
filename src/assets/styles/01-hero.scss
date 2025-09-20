@@ -1,7 +1,7 @@
 /* 01_HERO */
 .section.section-hero {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   background-image: url("../images/hero/hero-bg1.jpg");
   background-size: cover;
   background-position: center;
@@ -17,7 +17,7 @@
 
   span,
   h1 {
-    font-size: 13rem;
+    // font-size: 13rem;
     font-style: normal;
   }
 

@@ -1,0 +1,26 @@
+/* 02_Save the Date Section */
+.section-save-the-date {
+  background-image: url("../images/save-the-date/bg1.png"),
+    url("../images/save-the-date/bg2.jpg");
+  background-position: left top;
+  background-size: cover;
+  background-attachment: scroll;
+  margin: 0 auto;
+  pointer-events: auto;
+
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .date {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-top: 15px;
+  }
+
+  img {
+    max-width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+}
