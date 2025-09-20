@@ -1,0 +1,39 @@
+/* 01_HERO */
+.section.section-hero {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/hero/hero-bg1.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  color: white;
+
+  div.arcittya-begatri {
+    text-align: left;
+  }
+
+  span,
+  h1 {
+    font-size: 8rem;
+    font-style: normal;
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: normal;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  span {
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  div.section-hero_groom {
+    display: flex;
+    padding: 0 20px;
+  }
+}

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "./App.css";
+import "./App.scss";
 import siteData from "./data.json";
 
 function App() {
@@ -89,16 +89,17 @@ function App() {
   };
 
   return (
-    <div className="App" onClick={toggleAudio}>
+    <div className="wedding-invitation" onClick={toggleAudio}>
       {/* --- AUDIO --- */}
       <audio ref={audioRef} src="/audio/background-music.mp3" loop />
 
-      {/* --- 01_HERO SECTION --- */}
+      {/* --- 01_HERO --- */}
       <section className="section section-hero">
-        <div class="element-transtion">
-          <h1 styles="">{siteData.couple.shortName_bride}</h1>
-          <h1>&</h1>
-          <h1 styles="">{siteData.couple.shortName_groom}</h1>
+        <div class="element-transtion arcittya-begatri">
+          <h1>{siteData.couple.shortName_bride}</h1>
+          <div class="section-hero_groom">
+            <span>&</span> <h1>{siteData.couple.shortName_groom}</h1>
+          </div>
         </div>
       </section>
 
@@ -113,16 +114,14 @@ function App() {
           QUYẾT ĐỊNH BÊN NHAU <br />
           TRỌN ĐỜI
         </h2>
-        <p className="script-font monsieur-la-doulaise-regular">
-          Save the date
-        </p>
+        <p className="monsieur-la-doulaise-regular">Save the date</p>
         <p className="date">{siteData.event.date}</p>
         <img src="/images/save-the-date/couple-1.jpg" alt="Couple" />
       </section>
 
       {/* --- 03_CALENDAR --- */}
-      <section className="section section-calendar dark-bg">
-        <p className="script-font monsieur-la-doulaise-regular">Tháng 11</p>
+      <section className="section section-calendar section-secondary">
+        <p className="monsieur-la-doulaise-regular">Tháng 11</p>
         <div className="calendar-grid">
           {["MON", "TUE", "WED", "THUR", "FRI", "SAT", "SUN"].map((day) => (
             <div key={day} className="day-name open-sans-light">
@@ -229,7 +228,7 @@ function App() {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            gap: "20px"
+            gap: "20px",
           }}
         >
           <div style={{ display: "flex", alignItems: "center" }}>
@@ -258,7 +257,7 @@ function App() {
 
       {/* --- TIMELINE --- */}
       <section className="section">
-        <h2 className="script-font">Timeline</h2>
+        <h2>Timeline</h2>
         <div>
           {siteData.timeline.map((item) => (
             <div key={item.time} className="timeline-item">
@@ -339,8 +338,8 @@ function App() {
       </section>
 
       {/* --- COUNTDOWN --- */}
-      <section className="section dark-bg">
-        <h2 className="script-font">Countdown</h2>
+      <section className="section section-secondary">
+        <h2>Countdown</h2>
         <div className="countdown">
           {countdown.days}:{countdown.hours}:{countdown.minutes}:
           {countdown.seconds}
@@ -354,7 +353,7 @@ function App() {
       >
         <div className="thank-you-content">
           <p>{siteData.thankYou.message}</p>
-          <p className="script-font">{siteData.thankYou.signature}</p>
+          <p>{siteData.thankYou.signature}</p>
         </div>
       </section>
 
@@ -371,7 +370,7 @@ function App() {
             >
               &times;
             </button>
-            <h3 className="script-font">Thank you!</h3>
+            <h3>Thank you!</h3>
             <p>
               Những lời chúc này sẽ là động lực rất lớn giúp chúng mình bước vào
               một cánh cửa hôn nhân đầy mới mẻ.
