@@ -35,23 +35,6 @@
       "city": "TP. Hà Nội"
     }
   },
-  "timeline": [
-    {
-      "time": "8:30",
-      "title": "ĐÓN KHÁCH",
-      "description": "Checkin với photobooth và gửi lời chúc phúc đến CDCR"
-    },
-    {
-      "time": "9:00",
-      "title": "LỄ VU QUY",
-      "description": "Cùng nhau chứng kiến khoảnh khắc thiêng liêng cùng CDCR"
-    },
-    {
-      "time": "9:15",
-      "title": "KHAI TIỆC",
-      "description": "Cùng nhau ăn tiệc và nâng ly chúc mừng CDCR"
-    }
-  ],
   "gifting": {
     "account1": {
       "name": "Từ Thanh Hằng",

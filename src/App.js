@@ -257,7 +257,7 @@ function App() {
           />
 
           <h1 style={{ margin: "10px" }}>
-            {siteData.event.venue.toUpperCase()}
+            TẠI {siteData.event.venue.toUpperCase()}
           </h1>
           <p
             class="eb-garamond-regular"
@@ -272,35 +272,25 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={eventDetailsIcon3} width={40} height={40} alt="Event Details Icon2" />
+            <img
+              src={eventDetailsIcon3}
+              width={40}
+              height={40}
+              alt="Event Details Icon2"
+            />
             <h1>CHỈ ĐƯỜNG</h1>
           </a>
         </div>
 
-        {/* --- TIMELINE --- */}
-        <section className="section">
-          <h2>Timeline</h2>
-          <div>
-            {siteData.timeline.map((item) => (
-              <div key={item.time} className="timeline-item">
-                {/* You can add icons here */}
-                <div>
-                  <h3>
-                    {item.time} - {item.title}
-                  </h3>
-                  <p>{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        {/* --- RSVP FORM --- */}
-        <section className="section">
-          <h2>Gửi lời chúc</h2>
-          <p>
-            Hãy xác nhận sự có mặt của bạn để chúng mình chuẩn bị đón tiếp một
-            cách chu đáo nhất. Trân trọng!
-          </p>
+        {/* --- 06_RSVP FORM --- */}
+        <div class="section section-rsvp-form rsvp-form-heading element-transtion">
+          <h1>XÁC NHẬN THAM DỰ</h1>
+        </div>
+        <div className="section section-rsvp-form">
+          <h2 style={{ marginTop: 0, lineHeight: 1.5 }}>
+            Vui lòng xác nhận sự có mặt của bạn để chúng mình <br />
+            chuẩn bị đón tiếp một cách chu đáo nhất. Trân trọng!
+          </h2>
           <form className="rsvp-form" onSubmit={handleSubmit}>
             <input
               type="text"
@@ -348,23 +338,26 @@ function App() {
             <button type="submit" className="submit-btn">
               GỬI LỜI NHẮN
             </button>
-            <button
+            {/* <button
               type="button"
               className="gifting-btn"
               onClick={() => setShowGiftingModal(true)}
             >
               MỪNG CƯỚI
-            </button>
+            </button> */}
           </form>
-        </section>
-        {/* --- COUNTDOWN --- */}
-        <section className="section section-secondary">
-          <h2>Countdown</h2>
-          <div className="countdown">
+
+          <h2
+            className="monsieur-la-doulaise-regular"
+            style={{ fontSize: "4.5rem", marginBottom: 0 }}
+          >
+            Countdown
+          </h2>
+          <h2 className="countdown eb-garamond-regular" style={{ margin: 0, fontWeight: "lighter" }}>
             {countdown.days}:{countdown.hours}:{countdown.minutes}:
             {countdown.seconds}
-          </div>
-        </section>
+          </h2>
+        </div>
         {/* --- FINAL THANK YOU SECTION --- */}
         <section
           className="thank-you-section"

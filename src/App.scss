@@ -228,64 +228,10 @@ h5 {
 /* Specific position and rotation for the second photo (bride) */
 .section-invitation .photo-gallery-container .photo-two {
   transform: rotate(8deg);
-  z-index: 2; /* Ensures this photo is on top */
+  z-index: 2;
   top: 40px;
   right: 10%;
 }
-
-// /* Responsive adjustments for smaller screens */
-// @media (max-width: 768px) {
-//   .section-invitation .photo-gallery-container {
-//     /* Corrected the duplicated class */
-//     min-height: 350px;
-//   }
-
-//   .section-invitation .photo-gallery-container .polaroid {
-//     width: 300px; /* Make photos smaller */
-//     padding: 10px 10px 50px 10px;
-//   }
-
-//   .section-invitation .photo-gallery-container .photo-one {
-//     left: 5%;
-//   }
-
-//   .section-invitation .photo-gallery-container .photo-two {
-//     right: 5%;
-//     top: 60px;
-//   }
-// }
-
-// @media (max-width: 480px) {
-//   .section-invitation .photo-gallery-container {
-//     /* Corrected the duplicated class */
-//     /* Stack them more vertically */
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     position: static; /* Remove absolute positioning context */
-//     min-height: auto;
-//   }
-
-//   .section-invitation .photo-gallery-container .polaroid {
-//     position: static; /* Remove absolute positioning */
-//     margin-bottom: -100px; /* Overlap them vertically */
-//     width: 70%;
-//     max-width: 250px;
-//   }
-
-//   .section-invitation .photo-gallery-container .photo-one {
-//     transform: rotate(-5deg);
-//     margin-top: 20px;
-//   }
-
-//   .section-invitation .photo-gallery-container .photo-two {
-//     transform: rotate(5deg);
-//   }
-
-//   .section-invitation .photo-gallery-container .polaroid:hover {
-//     transform: scale(1.05) !important;
-//   }
-// }
 
 /* Family Section */
 .section-invitation .family-container {
@@ -311,91 +257,8 @@ h5 {
 /* 05_EVENT DETAILS */
 @import "./assets/styles/05-event-details.scss";
 
-/* Timeline Section */
-.timeline-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-.timeline-item .icon {
-  width: 50px;
-  height: 50px;
-}
-
-.timeline-item h3 {
-  margin: 0 0 5px 0;
-}
-
-.timeline-item p {
-  margin: 0;
-}
-
-/* Memories Section */
-.memories-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
-  padding: 20px;
-}
-
-.memories-gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* RSVP Form */
-.rsvp-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: 30px auto 0;
-}
-
-.rsvp-form input,
-.rsvp-form textarea,
-.rsvp-form select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  font-family: inherit;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-.rsvp-form button {
-  padding: 15px;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.rsvp-form .submit-btn {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.rsvp-form .gifting-btn {
-  background-color: var(--color-primary);
-  color: white;
-}
-
-.rsvp-form .submit-btn:hover {
-  background-color: #ddd;
-}
-
-.rsvp-form .gifting-btn:hover {
-  background-color: #52634d;
-}
+/* 06_RSVP Form */
+@import "./assets/styles/06-rsvp-form.scss";
 
 /* Countdown */
 .countdown {
@@ -526,12 +389,6 @@ h5 {
 //     padding-left: 0;
 //     padding-right: 0;
 //     text-align: center;
-//   }
-
-//   .timeline-item {
-//     flex-direction: column;
-//     text-align: center;
-//     gap: 10px;
 //   }
 
 //   .rsvp-form {
