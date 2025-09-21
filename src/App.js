@@ -14,9 +14,8 @@ function App() {
   const [formData, setFormData] = useState({
     name: "",
     message: "",
-    attending: "yes",
+    attending: "",
     guest: "none",
-    invitedBy: "bride",
   });
 
   // State for Countdown
@@ -59,27 +58,29 @@ function App() {
   // Form submission handler
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const response = await fetch("/api/submit-wish", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwUB_L79nT6ciXRiwJL-cZ4JAh9NcAOBLyEcUyqCWf5nd_D2yLb1JIM0Rc9JVjRQicU/exec",
+        {
+          method: "POST",
+          mode: "no-cors", // required for Google Apps Script
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      // Since mode: "no-cors" doesn't return status, assume success
+      setShowThankYouModal(true);
+      setFormData({
+        name: "",
+        message: "",
+        attending: "",
+        guest: "none",
       });
-      if (response.ok) {
-        setShowThankYouModal(true);
-        setFormData({
-          name: "",
-          message: "",
-          attending: "yes",
-          guest: "none",
-          invitedBy: "bride",
-        }); // Reset form
-      } else {
-        alert("Đã có lỗi xảy ra, vui lòng thử lại.");
-      }
     } catch (error) {
       console.error("Submission error:", error);
-      alert("Không thể kết nối đến máy chủ.");
+      alert("Không thể kết nối đến Google Sheets.");
     }
   };
 
@@ -312,7 +313,7 @@ function App() {
               value={formData.attending}
               onChange={handleInputChange}
             >
-              <option value="yes">Bạn sẽ đến chứ?</option>
+              <option value="">Bạn sẽ đến chứ?</option>
               <option value="yes">Chắc chắn rồi!</option>
               <option value="no">Tiếc quá, mình không thể đến</option>
             </select>
@@ -325,15 +326,6 @@ function App() {
               <option value="alone">Mình đi một mình</option>
               <option value="partner">Mình đi cùng người thương</option>
               <option value="family">Mình đi cùng gia đình</option>
-            </select>
-            <select
-              name="invitedBy"
-              value={formData.invitedBy}
-              onChange={handleInputChange}
-            >
-              <option value="bride">Bạn là khách mời của ai?</option>
-              <option value="bride">Cô dâu</option>
-              <option value="groom">Chú rể</option>
             </select>
             <button type="submit" className="submit-btn">
               GỬI LỜI NHẮN
@@ -353,7 +345,10 @@ function App() {
           >
             Countdown
           </h2>
-          <h2 className="countdown eb-garamond-regular" style={{ margin: 0, fontWeight: "lighter" }}>
+          <h2
+            className="countdown eb-garamond-regular"
+            style={{ margin: 0, fontWeight: "lighter" }}
+          >
             {countdown.days}:{countdown.hours}:{countdown.minutes}:
             {countdown.seconds}
           </h2>
