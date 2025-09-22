@@ -1,26 +1,35 @@
+@use "./_function.scss" as *;
+
 /* 02_Save the Date Section */
 .section-save-the-date {
-  background-image: url("../images/save-the-date/bg1.png"),
-    url("../images/save-the-date/bg2.jpg");
+  background-image: url("../images/02-save-the-date/bg1.png"),
+    url("../images/02-save-the-date/bg2.jpg");
   background-position: left top;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: round;
   background-attachment: scroll;
   margin: 0 auto;
   pointer-events: auto;
 
-  h2 {
-    font-size: 2.5rem;
+  .heading {
+    font-size: clamp-builder(1.5, 3.5);
     letter-spacing: 2px;
+    line-height: 1.4;
+    margin: auto;
+  }
+
+  .save-the-date {
+    font-size: clamp-builder(2, 4);
+    margin: auto;
   }
 
   .date {
-    font-size: 2.5rem;
-    font-weight: lighter;
-    margin-top: 15px;
+    font-size: clamp-builder(2.5, 3.5);
+    margin-top: 0;
   }
 
   img {
     max-width: 80%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(78, 81, 37, 0.761);
   }
 }

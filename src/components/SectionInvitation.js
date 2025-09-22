@@ -11,9 +11,10 @@ function SectionInvitation({ siteData }) {
       }}
     >
       <div>
-        <h2>
-          THÂN MỜI TỚI DỰ <br /> LỄ CƯỚI CỦA CHÚNG TÔI
-        </h2>
+        <h1 className="heading">
+          THÂN MỜI TỚI DỰ LỄ CƯỚI THÂN MẬT <br />
+          CỦA CHÚNG TÔI
+        </h1>
       </div>
       {/* Bride and Groom Info */}
       <div style={{ display: "flex", flexDirection: "column" }}>

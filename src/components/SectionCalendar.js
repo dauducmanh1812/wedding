@@ -3,9 +3,9 @@ import "../assets/styles/03-calendar.scss";
 function SectionCalendar() {
   return (
     <div className="section section-calendar section-secondary">
-      <h1 className="monsieur-la-doulaise-regular">Tháng 11</h1>
+      <h1 className="heading monsieur-la-doulaise-regular">Tháng 11</h1>
       <div className="calendar-grid">
-        {["MON", "TUE", "WED", "THUR", "FRI", "SAT", "SUN"].map((day) => (
+        {["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map((day) => (
           <div key={day} className="day-name open-sans-light">
             {day}
           </div>

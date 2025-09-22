@@ -105,7 +105,8 @@
 :root {
   --color-primary: rgb(49, 81, 37);
   --color-secondary: #f9f8f6;
-  --max-width: 768px;
+  --min-width: 360px;
+  --max-width: 840px;
 }
 
 body {
@@ -123,6 +124,7 @@ body {
   .wedding-invitation-section {
     width: 100%;
     max-width: var(--max-width);
+    min-width: var(--min-width);
   }
 }
 
@@ -147,4 +149,22 @@ h3,
 h4,
 h5 {
   font-weight: normal;
+}
+
+@function clamp-builder($minFontSize, $maxFontSize, $minWidthPx, $maxWidthPx) {
+  $minWidthPx: var(--min-width);
+  $maxWidthPx: var(--max-width);
+  $pixelsPerRem: 16; // default root font-size, adjust if needed
+
+  $minWidth: $minWidthPx / $pixelsPerRem;
+  $maxWidth: $maxWidthPx / $pixelsPerRem;
+
+  $slope: ($maxFontSize - $minFontSize) / ($maxWidth - $minWidth);
+  $yAxisIntersection: -$minWidth * $slope + $minFontSize;
+
+  @return clamp(
+    #{$minFontSize}rem,
+    #{$yAxisIntersection}rem + #{$slope * 100}vw,
+    #{$maxFontSize}rem
+  );
 }

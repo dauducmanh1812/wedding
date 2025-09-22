@@ -1,0 +1,19 @@
+// src/styles/_functions.scss
+
+$minWidthPx: 360px;
+$maxWidthPx: 840px;
+
+@function clamp-builder($minFontSize, $maxFontSize, $pixelsPerRem: 16) {
+  // Strip px units by dividing by 1px
+  $minWidth: ($minWidthPx / 1px) / $pixelsPerRem;
+  $maxWidth: ($maxWidthPx / 1px) / $pixelsPerRem;
+
+  $slope: ($maxFontSize - $minFontSize) / ($maxWidth - $minWidth);
+  $yAxisIntersection: -$minWidth * $slope + $minFontSize;
+
+  @return clamp(
+    #{$minFontSize}rem,
+    #{$yAxisIntersection}rem + #{$slope * 100}vw,
+    #{$maxFontSize}rem
+  );
+}

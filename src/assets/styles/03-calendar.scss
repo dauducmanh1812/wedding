@@ -1,47 +1,40 @@
+@use "./_function.scss" as *;
+
 /* 03_Calendar Section */
 .section-calendar {
-  padding: 50px 10px 30px 10px !important;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  p {
+  .heading {
+    font-size: clamp-builder(3, 5);
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 37.65px;
   }
 
   .calendar-grid {
     display: grid;
-    grid-template-columns: repeat(7, 0fr);
-    gap: 4px;
-    div {
-      padding: 10px;
-    }
-    .day-name {
-      font-weight: normal;
-    }
-    .date-number {
-      font-size: 15px;
-    }
-    .date-number.highlight {
-      position: relative;
+    width: 80%;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 7px;
+    font-size: clamp-builder(1, 2.8);
+    justify-content: center;
 
-      &::after {
-        content: "";
-        background-image: url("../images/calendar/heart.png");
-        background-size: cover; /* or contain, depending on your needs */
-        width: 55px;
-        height: 55px;
-        position: absolute;
-        top: -10px;
-        right: -4px;
-        font-size: 1.2rem;
-        animation-name: pulse;
-        animation-delay: 0s;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-      }
+    .day-name {
+      padding: 5px 5px 10px 5px;
+    }
+
+    .date-number {
+      padding: 20px 5px 20px 5px;
+    }
+
+    .date-number.highlight {
+      background-image: url("../images/calendar/heart.png");
+      background-size: cover;
+      background-repeat: round;
+      animation-name: pulse;
+      animation-delay: 0s;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
     }
   }
 }
