@@ -27,6 +27,45 @@
   }
 
   .gallery-container {
-    overflow: hidden;
+    display: flex;
+    justify-content: start;
   }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+
+    .gallery-thumb {
+      width: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-thumb:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  // .gallery-grid {
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  //   gap: 12px;
+  //   width: 100%;
+  //   max-width: 1000px; // keeps it centered and not too wide
+  // }
+
+  // .gallery-thumb {
+  //   width: 100%;
+  //   height: auto;
+  //   border-radius: 8px;
+  //   cursor: pointer;
+  //   object-fit: cover;
+  //   transition: transform 0.2s ease;
+  // }
+
+  // .gallery-thumb:hover {
+  //   transform: scale(1.03);
+  // }
 }

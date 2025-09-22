@@ -1,12 +1,66 @@
-import LightGallery from "lightgallery/react";
-import "lightgallery/scss/lightgallery.scss";
-import "lightgallery/scss/lg-zoom.scss";
-import lgThumbnail from "lightgallery/plugins/thumbnail";
-import lgZoom from "lightgallery/plugins/zoom";
+import { useEffect, useState } from "react";
+
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
 
 import "../assets/styles/06-gallery.scss";
 
 function SectionGallery() {
+  const [galleryID] = useState("my-test-gallery");
+
+  const images = [
+    {
+      largeURL:
+        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg",
+    },
+    {
+      largeURL:
+        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg",
+    },
+    {
+      largeURL:
+        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
+    },
+    {
+      largeURL:
+        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg",
+    },
+    {
+      largeURL:
+        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg",
+    },
+    {
+      largeURL:
+        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg",
+    },
+    {
+      largeURL:
+        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg",
+    },
+    {
+      largeURL:
+        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg",
+    },
+    {
+      largeURL:
+        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg",
+    },
+  ];
+
+  useEffect(() => {
+    let lightbox = new PhotoSwipeLightbox({
+      gallery: "#" + galleryID,
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+    });
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+      lightbox = null;
+    };
+  }, [galleryID]);
+
   return (
     <div className="section section-gallery">
       <div className="flex-container our-memories-heading">
@@ -24,25 +78,18 @@ function SectionGallery() {
           love that will last a lifetime.
         </h3>
       </div>
+
+      {/* ✅ Gallery Grid */}
       <div className="flex-container gallery-container">
-        <LightGallery
-          speed={500}
-          plugins={[lgThumbnail, lgZoom]}
-        >
-          <a href="https://images.unsplash.com/photo-1584592740039-cddf0671f3d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80">
-            <img
-              alt="img1"
-              src="https://images.unsplash.com/photo-1584592740039-cddf0671f3d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
-            />
-          </a>
-          <a href="https://images.unsplash.com/photo-1584592740039-cddf0671f3d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80">
-            <img
-              alt="img2"
-              src="https://images.unsplash.com/photo-1584592740039-cddf0671f3d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
-            />
-          </a>
-          ...
-        </LightGallery>
+        <div className="pswp-gallery" id={galleryID}>
+          <div className="gallery-grid">
+            {images.map((image, index) => (
+              <a href={image.largeURL} key={galleryID + "-" + index}>
+                <img src={image.largeURL} alt="" className="gallery-thumb" />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
