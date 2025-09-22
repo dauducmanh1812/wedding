@@ -10,7 +10,7 @@ $background-color_4: #52634d;
 div.rsvp-form-heading {
   position: relative;
   height: 70vh;
-  background-image: url("../images/hero/hero-bg1.jpg");
+  background-image: url("../images/01-hero/hero-bg.jpg");
   background-size: cover;
   background-position: center;
 
@@ -28,6 +28,18 @@ div.rsvp-form-heading {
   background-attachment: scroll;
   margin: 0 auto;
   pointer-events: auto;
+
+  /* Countdown */
+  .countdown-heading {
+    font-size: 4.5rem;
+    margin-bottom: 0;
+  }
+  .countdown-numbers {
+    font-size: 3rem;
+    letter-spacing: 10px;
+    font-weight: "lighter";
+    margin: 0;
+  }
 
   .rsvp-form {
     display: flex;
@@ -90,5 +102,44 @@ div.rsvp-form-heading {
         background-color: $background-color_4;
       }
     }
+  }
+
+  /* Modals */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background-color: var(--color-secondary);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 500px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    margin-top: 20px;
   }
 }

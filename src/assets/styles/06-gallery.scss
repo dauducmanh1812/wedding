@@ -1,0 +1,32 @@
+/* 06_GALLERY */
+.section-gallery {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+
+  .our-memories-heading {
+    display: flex;
+    align-items: center;
+
+    .our-memories-text {
+      font-size: 6rem;
+      line-height: 0;
+    }
+    .our-memories-line {
+      height: 2px;
+      background-color: var(--color-secondary);
+      flex-grow: 1;
+      margin-left: 20px;
+      margin-top: 40px;
+    }
+  }
+
+  .our-memories-description {
+    margin: 0;
+    text-align: justify;
+    line-height: 2;
+  }
+
+  .gallery-container {
+    overflow: hidden;
+  }
+}

@@ -95,9 +95,6 @@ All text displayed on the website can be changed in the **`src/data.json`** file
 
 1.  A guest fills out the form on the website and clicks "GỬI LỜI NHẮN".
 2.  The React app sends the form data to the backend API endpoint (`/api/submit-wish`).
-3.  The Express server (`server.js`) receives the data.
-4.  The server reads the existing `src/wishes.json` file, adds the new message to the list, and saves the file.
-5.  All submitted wishes can be found in the **`src/wishes.json`** file.
 
 ## 📜 Available Scripts
 
