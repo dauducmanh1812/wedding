@@ -11,17 +11,12 @@
   align-items: flex-end;
   color: white;
 
-  div.arcittya-begatri {
-    text-align: left;
-  }
-
-  span,
-  h1 {
-    // font-size: 13rem;
-    font-style: normal;
-  }
+  text-align: left;
+  font-style: normal;
+  font-size: 90px !important;
 
   h1 {
+    font-size: 1em;
     margin: 0;
     font-family: MUZUViWSVAtSEFTVEVHSSPVEY;
     font-weight: normal;
@@ -33,7 +28,7 @@
     font-weight: normal;
   }
 
-  div.section-hero_groom {
+  .second {
     display: flex;
     padding: 0 20px;
   }

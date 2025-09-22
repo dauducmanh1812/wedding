@@ -105,6 +105,7 @@
 :root {
   --color-primary: rgb(49, 81, 37);
   --color-secondary: #f9f8f6;
+  --max-width: 768px;
 }
 
 body {
@@ -121,7 +122,7 @@ body {
 
   .wedding-invitation-section {
     width: 100%;
-    max-width: 768px;
+    max-width: var(--max-width);
   }
 }
 
