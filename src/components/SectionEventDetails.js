@@ -17,7 +17,7 @@ function SectionEventDetails({ siteData }) {
     >
       <img
         src="/images/event-details/icon1.png"
-        width={200}
+        width={180}
         alt="Event Details Icon1"
       />
       <h1 className="event-time">
@@ -25,7 +25,7 @@ function SectionEventDetails({ siteData }) {
         VÀO LÚC {siteData.event.time}
       </h1>
 
-      <h1>{siteData.event.dining.weekday}</h1>
+      <h1 className="event-dining-weekday">{siteData.event.dining.weekday}</h1>
 
       <div
         style={{
