@@ -44,7 +44,7 @@ function SectionEventDetails({ siteData }) {
         </div>
       </div>
 
-      <h3 className="lunar-date" style={{ margin: "5px" }}>
+      <h3 className="lunar-date eb-garamond-regular" style={{ margin: "5px" }}>
         {siteData.event.lunarDate}
       </h3>
 
@@ -61,12 +61,8 @@ function SectionEventDetails({ siteData }) {
       <h1 className="venue" style={{ marginBottom: "10px", marginTop: 0 }}>
         {siteData.event.venue_sub.toUpperCase()}
       </h1>
-      <p
-        className="eb-garamond-regular"
-        style={{ fontSize: "20px", margin: "10px" }}
-      >
-        Địa chỉ: {siteData.event.address}
-      </p>
+
+      <h3 className="eb-garamond-regular">Địa chỉ: {siteData.event.address}</h3>
 
       <a
         className="map-guide"
