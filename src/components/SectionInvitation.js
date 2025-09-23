@@ -1,5 +1,8 @@
 import "../assets/styles/04-invitation.scss";
 
+import photo1 from "../assets/images/04-invitation/photo1.png";
+import photo2 from "../assets/images/04-invitation/photo2.png";
+
 function SectionInvitation({ siteData }) {
   return (
     <div className="section section-invitation">
@@ -22,14 +25,15 @@ function SectionInvitation({ siteData }) {
 
       {/* Bride and Groom Image */}
       <div className="photo-gallery-container">
+        
         {/* Groom's Photo */}
         <div className="polaroid photo-one">
-          <img src="/images/invitation/qr-1.png" alt="Groom in a grey suit" />
+          <img src={photo1} alt="Groom in a grey suit" />
         </div>
 
         {/* Bride's Photo */}
         <div className="polaroid photo-two">
-          <img src="/images/invitation/qr-1.png" alt="Bride with a veil" />
+          <img src={photo2} alt="Bride with a veil" />
         </div>
       </div>
 

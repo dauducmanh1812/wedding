@@ -43,27 +43,27 @@
   }
 
   .photo-gallery-container {
-    position: relative;
     width: 100%;
-    min-height: 450px;
-    margin: 0 auto;
+    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     .polaroid {
-      position: absolute;
-      background-color: #fff;
-      padding: 5px 5px 40px 5px;
+      position: relative;
+      background-color: var(--color-secondary);
+      padding: 5px 5px 60px 5px;
       border-radius: 5px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15);
       width: clamp-builder(10, 22);
       transition: transform 0.3s ease-in-out;
+
       &:hover {
         transform: scale(1.05) rotate(0deg) !important;
         z-index: 10;
       }
 
       img {
+        aspect-ratio: 9/10;
         width: 100%;
         height: auto;
         display: block;
@@ -72,16 +72,16 @@
     .photo-one {
       transform: rotate(-12deg);
       z-index: 2;
-      top: 60px;
-      left: 2%;
+      top: 30px;
+      left: 5%;
     }
     .photo-two {
       transform: rotate(10deg);
       z-index: 1;
-      top: 10px;
-      right: 2%;
+      right: 5%;
     }
   }
+
   .family-container {
     display: flex;
     justify-content: center;
