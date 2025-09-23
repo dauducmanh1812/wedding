@@ -44,7 +44,9 @@ function SectionEventDetails({ siteData }) {
         </div>
       </div>
 
-      <h3 className="lunar-date" style={{ margin: "5px" }}>{siteData.event.lunarDate}</h3>
+      <h3 className="lunar-date" style={{ margin: "5px" }}>
+        {siteData.event.lunarDate}
+      </h3>
 
       <img
         style={{ margin: "20px" }}
@@ -53,8 +55,11 @@ function SectionEventDetails({ siteData }) {
         alt="Event Details Icon2"
       />
 
-      <h1 style={{ margin: "10px" }}>
+      <h1 className="venue" style={{ marginTop: "10px", marginBottom: 0 }}>
         TẠI {siteData.event.venue.toUpperCase()}
+      </h1>
+      <h1 className="venue" style={{ marginBottom: "10px", marginTop: 0 }}>
+        {siteData.event.venue_sub.toUpperCase()}
       </h1>
       <p
         className="eb-garamond-regular"

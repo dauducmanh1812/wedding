@@ -39,7 +39,7 @@
 
   .event-time {
     font-family: RUJHYXJhbWuZCNZWRpdWudHRm;
-    font-size: clamp-builder(1.2, 2.5);
+    font-size: clamp-builder(1, 2.5);
   }
 
   .event-dining-weekday {
@@ -56,7 +56,8 @@
     font-size: clamp-builder(1.3, 2.6);
   }
 
-  .lunar-date {
-    
+  .venue {
+    font-family: RUJHYXJhbWuZCNZWRpdWudHRm;
+    font-size: clamp-builder(1, 2.5);
   }
 }
