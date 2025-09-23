@@ -30,7 +30,7 @@ function App() {
       {/* --- AUDIO --- */}
       <audio ref={audioRef} src="/audio/background-music.mp3" loop />
 
-      <div className="wedding-invitation-section">
+      <div className="wedding-invitation-container">
         <SectionHero siteData={siteData} />
         <SectionSaveTheDate siteData={siteData} />
         <SectionCalendar />
