@@ -2,23 +2,22 @@ import "../assets/styles/04-invitation.scss";
 
 function SectionInvitation({ siteData }) {
   return (
-    <div
-      className="section section-invitation"
-      style={{
-        backgroundImage: `url("/images/background2.jpg")`,
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <div className="section section-invitation">
+      {/* Heading */}
       <h3 className="heading">
         THÂN MỜI TỚI DỰ LỄ CƯỚI THÂN MẬT <br />
         CỦA CHÚNG TÔI
       </h3>
+
       {/* Bride and Groom Info */}
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <h1 className="text-and">{"&".toUpperCase()}</h1>
-        <h1 style={{ margin: 15 }}>{siteData.couple.bride.toUpperCase()}</h1>
-        <h1 style={{ margin: 15 }}>{siteData.couple.groom.toUpperCase()}</h1>
+      <div className="information-container">
+        <h2 className="information-name">
+          {siteData.couple.bride.toUpperCase()}
+        </h2>
+        <h1 className="text-and">&</h1>
+        <h2 className="information-name">
+          {siteData.couple.groom.toUpperCase()}
+        </h2>
       </div>
 
       {/* Bride and Groom Image */}

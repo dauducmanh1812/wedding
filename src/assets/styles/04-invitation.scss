@@ -1,40 +1,41 @@
+@use "./_function.scss" as *;
+
 /* 04_Invitation Section */
 .section-invitation {
+  background-image: url("../images/04-invitation/background.jpg");
   background-position: left top;
   background-size: contain;
   background-repeat: round;
   background-attachment: scroll;
   margin: 0 auto;
   pointer-events: auto;
+  display: flex;
+  flex-direction: column;
 
   .heading {
     font-family: RUJHYXJhbWuZCNZWRpdWudHRm;
     margin-top: 0;
     margin-bottom: 5px;
+    font-size: clamp-builder(1, 2.5);
   }
 
-  h2 {
-    font-size: 2rem;
-    line-height: 1.5;
-    color: var(--color-primary);
-    letter-spacing: 0px;
-    text-align: center;
-    margin: 0 0.4em;
-  }
-  h1 {
-    font-size: 3.5rem;
-    &.family-title {
-      text-transform: uppercase;
-      margin: 0 0.4em;
+  .information-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+
+    .information-name {
+      font-size: clamp-builder(2.5, 3.5);
+      line-height: 0.5;
     }
   }
+
   .text-and {
     font-family: MUZUViWSVAtQVJDSVRUWUEtQkVHQVRSSSPVEY;
+    font-size: clamp-builder(11.5, 11.5);
+    line-height: 0;
     margin: 0;
-    font-size: 7rem;
     opacity: 0.4;
-    position: absolute;
-    left: 50%;
     &:hover {
       opacity: 1;
     }
