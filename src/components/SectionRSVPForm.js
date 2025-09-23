@@ -74,86 +74,81 @@ function SectionRSVPForm({ siteData }) {
     }
   };
   return (
-    <>
-      <div className="section section-rsvp-form rsvp-form-heading element-transtion">
-        <h1>XÁC NHẬN THAM DỰ</h1>
-      </div>
+    <div className="section section-rsvp-form">
+      <h1>XÁC NHẬN THAM DỰ</h1>
+      <h2 style={{ marginTop: 0, lineHeight: 1.5 }}>
+        Vui lòng xác nhận sự có mặt của bạn để chúng mình <br />
+        chuẩn bị đón tiếp một cách chu đáo nhất. Trân trọng!
+      </h2>
+      <form className="rsvp-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Tên của bạn"
+          value={formData.name}
+          onChange={handleInputChange}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Gửi lời nhắn đến cô dâu chú rể"
+          value={formData.message}
+          onChange={handleInputChange}
+          rows="4"
+        ></textarea>
+        <select
+          name="attending"
+          value={formData.attending}
+          onChange={handleInputChange}
+        >
+          <option value="">Bạn sẽ đến chứ?</option>
+          <option value="yes">Chắc chắn rồi!</option>
+          <option value="no">Tiếc quá, mình không thể đến</option>
+        </select>
+        <select
+          name="guest"
+          value={formData.guest}
+          onChange={handleInputChange}
+        >
+          <option value="none">Bạn tham dự cùng ai?</option>
+          <option value="alone">Mình đi một mình</option>
+          <option value="partner">Mình đi cùng người thương</option>
+          <option value="family">Mình đi cùng gia đình</option>
+        </select>
+        <button type="submit" className="submit-btn">
+          GỬI LỜI NHẮN
+        </button>
+      </form>
 
-      <div className="section section-rsvp-form">
-        <h2 style={{ marginTop: 0, lineHeight: 1.5 }}>
-          Vui lòng xác nhận sự có mặt của bạn để chúng mình <br />
-          chuẩn bị đón tiếp một cách chu đáo nhất. Trân trọng!
-        </h2>
-        <form className="rsvp-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Tên của bạn"
-            value={formData.name}
-            onChange={handleInputChange}
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Gửi lời nhắn đến cô dâu chú rể"
-            value={formData.message}
-            onChange={handleInputChange}
-            rows="4"
-          ></textarea>
-          <select
-            name="attending"
-            value={formData.attending}
-            onChange={handleInputChange}
-          >
-            <option value="">Bạn sẽ đến chứ?</option>
-            <option value="yes">Chắc chắn rồi!</option>
-            <option value="no">Tiếc quá, mình không thể đến</option>
-          </select>
-          <select
-            name="guest"
-            value={formData.guest}
-            onChange={handleInputChange}
-          >
-            <option value="none">Bạn tham dự cùng ai?</option>
-            <option value="alone">Mình đi một mình</option>
-            <option value="partner">Mình đi cùng người thương</option>
-            <option value="family">Mình đi cùng gia đình</option>
-          </select>
-          <button type="submit" className="submit-btn">
-            GỬI LỜI NHẮN
-          </button>
-        </form>
+      <h2 className="monsieur-la-doulaise-regular countdown-heading">
+        Countdown
+      </h2>
+      <h2 className="eb-garamond-regular countdown-numbers">
+        {countdown.days}:{countdown.hours}:{countdown.minutes}:
+        {countdown.seconds}
+      </h2>
 
-        <h2 className="monsieur-la-doulaise-regular countdown-heading">
-          Countdown
-        </h2>
-        <h2 className="eb-garamond-regular countdown-numbers">
-          {countdown.days}:{countdown.hours}:{countdown.minutes}:
-          {countdown.seconds}
-        </h2>
-
-        {showThankYouModal && (
-          <div
-            className="modal-overlay"
-            onClick={() => setShowThankYouModal(false)}
-          >
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button
-                className="modal-close-btn"
-                onClick={() => setShowThankYouModal(false)}
-              >
-                &times;
-              </button>
-              <h3>Thank you!</h3>
-              <p>
-                Những lời chúc này sẽ là động lực rất lớn giúp chúng mình bước
-                vào một cánh cửa hôn nhân đầy mới mẻ.
-              </p>
-            </div>
+      {showThankYouModal && (
+        <div
+          className="modal-overlay"
+          onClick={() => setShowThankYouModal(false)}
+        >
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="modal-close-btn"
+              onClick={() => setShowThankYouModal(false)}
+            >
+              &times;
+            </button>
+            <h3>Thank you!</h3>
+            <p>
+              Những lời chúc này sẽ là động lực rất lớn giúp chúng mình bước vào
+              một cánh cửa hôn nhân đầy mới mẻ.
+            </p>
           </div>
-        )}
-      </div>
-    </>
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -43,7 +43,12 @@
   }
 
   .event-dining-weekday {
-    font-size: clamp-builder(1.2, 2.5);
+    font-size: clamp-builder(2, 3);
     margin: 10px auto;
+  }
+
+  .month,
+  .year {
+    font-size: clamp-builder(1.5, 3);
   }
 }
