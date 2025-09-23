@@ -1,3 +1,5 @@
+@use "./_function.scss" as *;
+
 /* 06_RSVP Form */
 $color_1: #333;
 $color_2: white;
@@ -28,6 +30,13 @@ div.rsvp-form-heading {
   background-attachment: scroll;
   margin: 0 auto;
   pointer-events: auto;
+
+  .confirm-attending {
+    font-size: clamp-builder(1, 2.5);
+  }
+  .confirm-attending-sub {
+    font-size: clamp-builder(0.9, 2.2);
+  }
 
   /* Countdown */
   .countdown-heading {
