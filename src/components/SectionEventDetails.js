@@ -62,7 +62,7 @@ function SectionEventDetails({ siteData }) {
         {siteData.event.venue_sub.toUpperCase()}
       </h1>
 
-      <h3 className="eb-garamond-regular">Địa chỉ: {siteData.event.address}</h3>
+      <h3 className="eb-garamond-regular" style={{ marginBottom: "5px", marginTop: "5px" }}>Địa chỉ: {siteData.event.address}</h3>
 
       <a
         className="map-guide"
