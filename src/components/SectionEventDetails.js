@@ -17,10 +17,10 @@ function SectionEventDetails({ siteData }) {
     >
       <img
         src="/images/event-details/icon1.png"
-        width={250}
+        width={200}
         alt="Event Details Icon1"
       />
-      <h1>
+      <h1 className="event-time">
         TIỆC NHÀ GÁI ĐƯỢC TỔ CHỨC <br />
         VÀO LÚC {siteData.event.time}
       </h1>

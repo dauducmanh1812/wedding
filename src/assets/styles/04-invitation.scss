@@ -86,27 +86,29 @@
     font-family: RUJHYXJhbWuZCNZWRpdWudHRm;
     display: grid;
     grid-auto-flow: column;
-    margin-top: 40px;
+    margin-top: 100px;
 
     .family-title {
+      margin-top: 0;
       font-size: clamp-builder(1.5, 3);
       font-weight: 500;
     }
 
     .family-info {
       font-size: clamp-builder(1, 2.2);
+      margin-bottom: 0;
     }
   }
 
   .family-side {
     &:first-child {
       border-left: none;
-      border-right: 2px solid var(--color-primary);
+      border-right: 1px solid var(--color-primary);
       padding-left: 0;
       padding-right: 5px;
     }
     &:last-child {
-      border-left: 2px solid var(--color-primary);
+      border-left: 1px solid var(--color-primary);
       border-right: none;
       padding-left: 5px;
       padding-right: 0;
