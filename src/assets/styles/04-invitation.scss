@@ -59,8 +59,8 @@
       width: clamp-builder(10, 22);
       transition: transform 0.3s ease-in-out;
       &:hover {
-        // transform: scale(1.05) rotate(0deg) !important;
-        // z-index: 10;
+        transform: scale(1.05) rotate(0deg) !important;
+        z-index: 10;
       }
 
       img {
