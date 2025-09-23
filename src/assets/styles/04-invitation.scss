@@ -89,7 +89,12 @@
     margin-top: 40px;
 
     .family-title {
-      font-size: clamp-builder(2, 3);
+      font-size: clamp-builder(1.5, 3);
+      font-weight: 500;
+    }
+
+    .family-info {
+      font-size: clamp-builder(1, 2.2);
     }
   }
 
@@ -98,12 +103,12 @@
       border-left: none;
       border-right: 2px solid var(--color-primary);
       padding-left: 0;
-      padding-right: 40px;
+      padding-right: 5px;
     }
     &:last-child {
       border-left: 2px solid var(--color-primary);
       border-right: none;
-      padding-left: 40px;
+      padding-left: 5px;
       padding-right: 0;
     }
   }

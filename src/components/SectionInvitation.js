@@ -42,23 +42,23 @@ function SectionInvitation({ siteData }) {
           <h1 className="family-title">
             {siteData.family.brideSide.title.toUpperCase()}
           </h1>
-          <h1 className="family-info">
+          <h2 className="family-info">
             {siteData.family.brideSide.father} <br />
             {siteData.family.brideSide.mother} <br />
             {siteData.family.brideSide.city}
-          </h1>
+          </h2>
         </div>
         <div className="family-side">
           <h1 className="family-title">
             {siteData.family.groomSide.title.toUpperCase()}
           </h1>
-          <h1 className="family-info">
+          <h2 className="family-info">
             {siteData.family.groomSide.father}
             <br />
             {siteData.family.groomSide.mother}
             <br />
             {siteData.family.groomSide.city}
-          </h1>
+          </h2>
         </div>
       </div>
     </div>
