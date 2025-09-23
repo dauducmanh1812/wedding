@@ -17,7 +17,7 @@ function SectionCalendar() {
         {[...Array(30).keys()].map((i) => (
           <div
             key={i}
-            className={`date-number ${i + 1 === 2 ? "highlight" : ""}`}
+            className={`date-number ${i + 1 === 1 ? "highlight" : ""}`}
           >
             {i + 1}
           </div>
