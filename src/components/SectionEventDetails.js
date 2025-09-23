@@ -44,12 +44,12 @@ function SectionEventDetails({ siteData }) {
         </div>
       </div>
 
-      <h2 style={{ margin: "10px" }}>{siteData.event.lunarDate}</h2>
+      <h3 className="lunar-date" style={{ margin: "5px" }}>{siteData.event.lunarDate}</h3>
 
       <img
         style={{ margin: "20px" }}
         src={eventDetailsIcon2}
-        width={100}
+        width={70}
         alt="Event Details Icon2"
       />
 
