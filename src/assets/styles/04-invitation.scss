@@ -1,10 +1,18 @@
 /* 04_Invitation Section */
 .section-invitation {
   background-position: left top;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: round;
   background-attachment: scroll;
   margin: 0 auto;
   pointer-events: auto;
+
+  .heading {
+    font-family: RUJHYXJhbWuZCNZWRpdWudHRm;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
   h2 {
     font-size: 2rem;
     line-height: 1.5;

@@ -10,12 +10,10 @@ function SectionInvitation({ siteData }) {
         flexDirection: "column",
       }}
     >
-      <div>
-        <h1 className="heading">
-          THÂN MỜI TỚI DỰ LỄ CƯỚI THÂN MẬT <br />
-          CỦA CHÚNG TÔI
-        </h1>
-      </div>
+      <h3 className="heading">
+        THÂN MỜI TỚI DỰ LỄ CƯỚI THÂN MẬT <br />
+        CỦA CHÚNG TÔI
+      </h3>
       {/* Bride and Groom Info */}
       <div style={{ display: "flex", flexDirection: "column" }}>
         <h1 className="text-and">{"&".toUpperCase()}</h1>
