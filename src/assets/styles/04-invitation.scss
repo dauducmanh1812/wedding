@@ -14,9 +14,9 @@
 
   .heading {
     font-family: RUJHYXJhbWuZCNZWRpdWudHRm;
+    font-size: clamp-builder(1, 2.5);
     margin-top: 0;
     margin-bottom: 5px;
-    font-size: clamp-builder(1, 2.5);
   }
 
   .information-container {
@@ -83,11 +83,16 @@
   }
 
   .family-container {
-    display: flex;
-    justify-content: center;
+    font-family: RUJHYXJhbWuZCNZWRpdWudHRm;
+    display: grid;
+    grid-auto-flow: column;
     margin-top: 40px;
-    flex-direction: row;
+
+    .family-title {
+      font-size: clamp-builder(2, 3);
+    }
   }
+
   .family-side {
     &:first-child {
       border-left: none;

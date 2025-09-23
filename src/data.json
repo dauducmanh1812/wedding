@@ -24,15 +24,15 @@
   "family": {
     "brideSide": {
       "title": "Nhà Gái",
-      "father": "Ông. Từ Mạnh Thành",
-      "mother": "Bà. Lương Thu Hiền",
-      "city": "TP. Hà Nội"
+      "father": "Bố. Từ Mạnh Thành",
+      "mother": "Mẹ. Lương Thu Hiền",
+      "city": "Hà Nội"
     },
     "groomSide": {
       "title": "Nhà Trai",
-      "father": "Ông. Đỗ Minh Đà",
-      "mother": "Bà. Kiều Thị Ngân",
-      "city": "TP. Hà Nội"
+      "father": "Bố. Đỗ Minh Đà",
+      "mother": "Mẹ. Kiều Thị Ngân",
+      "city": "Hà Nội"
     }
   },
   "countdownTarget": "2025-11-01T17:00:00",
@@ -41,4 +41,3 @@
     "signature": "Thank you!"
   }
 }
- 

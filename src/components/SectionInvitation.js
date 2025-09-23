@@ -25,7 +25,6 @@ function SectionInvitation({ siteData }) {
 
       {/* Bride and Groom Image */}
       <div className="photo-gallery-container">
-        
         {/* Groom's Photo */}
         <div className="polaroid photo-one">
           <img src={photo1} alt="Groom in a grey suit" />
@@ -40,22 +39,26 @@ function SectionInvitation({ siteData }) {
       {/* Family Info */}
       <div className="family-container">
         <div className="family-side">
-          <h1 className="family-title">{siteData.family.brideSide.title}</h1>
-          <h2>
+          <h1 className="family-title">
+            {siteData.family.brideSide.title.toUpperCase()}
+          </h1>
+          <h1 className="family-info">
             {siteData.family.brideSide.father} <br />
             {siteData.family.brideSide.mother} <br />
             {siteData.family.brideSide.city}
-          </h2>
+          </h1>
         </div>
         <div className="family-side">
-          <h1 className="family-title">{siteData.family.groomSide.title}</h1>
-          <h2>
+          <h1 className="family-title">
+            {siteData.family.groomSide.title.toUpperCase()}
+          </h1>
+          <h1 className="family-info">
             {siteData.family.groomSide.father}
             <br />
             {siteData.family.groomSide.mother}
             <br />
             {siteData.family.groomSide.city}
-          </h2>
+          </h1>
         </div>
       </div>
     </div>
