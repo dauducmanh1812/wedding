@@ -9,22 +9,23 @@
   .heading {
     font-size: clamp-builder(3, 5);
     margin-top: 0;
+    margin-bottom: 5px;
   }
 
   .calendar-grid {
     display: grid;
-    width: 80%;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 7px;
-    font-size: clamp-builder(1, 2.8);
-    justify-content: center;
+    width: 90%;
+    grid-template-columns: repeat(7, 0fr);
+    gap: 1px;
+    font-size: clamp-builder(0.8, 1);
+    justify-content: space-around;
 
     .day-name {
       padding: 5px 5px 10px 5px;
     }
 
     .date-number {
-      padding: 20px 5px 20px 5px;
+      padding: 10px;
     }
 
     .date-number.highlight {
