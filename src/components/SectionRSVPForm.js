@@ -75,9 +75,7 @@ function SectionRSVPForm({ siteData }) {
   };
   return (
     <div className="section section-rsvp-form eb-garamond-regular">
-      <h1 className="confirm-attending" style={{ marginTop: 0 }}>
-        XÁC NHẬN THAM DỰ
-      </h1>
+      <h1 className="confirm-attending">XÁC NHẬN THAM DỰ</h1>
       <p className="confirm-attending-sub">
         Vui lòng xác nhận sự có mặt của bạn để chúng mình <br />
         chuẩn bị đón tiếp một cách chu đáo nhất. Trân trọng!

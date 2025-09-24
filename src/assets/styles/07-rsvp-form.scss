@@ -9,24 +9,12 @@ $background-color_2: var(--color-primary);
 $background-color_3: #ddd;
 $background-color_4: #52634d;
 
-div.rsvp-form-heading {
-  position: relative;
-  height: 70vh;
-  background-image: url("../images/07-rsvp-form/rsvp-form0.jpg");
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  color: white;
-}
-
 .section-rsvp-form {
   background-image: url("../images/07-rsvp-form/bg1.png"),
     url("../images/07-rsvp-form/bg3.png"), url("../images/07-rsvp-form/bg2.jpg");
   background-position: left top;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: round;
   background-attachment: scroll;
   margin: 0 auto;
   pointer-events: auto;
