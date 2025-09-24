@@ -1,3 +1,5 @@
+@use "./_function.scss" as *;
+
 /* 06_GALLERY */
 .section-gallery {
   background-color: var(--color-primary);
@@ -8,22 +10,22 @@
     align-items: center;
 
     .our-memories-text {
-      font-size: 6rem;
+      font-size: clamp-builder(3.6, 8);
       line-height: 0;
     }
     .our-memories-line {
       height: 2px;
       background-color: var(--color-secondary);
       flex-grow: 1;
-      margin-left: 20px;
+      margin-left: 5px;
       margin-top: 40px;
     }
   }
 
   .our-memories-description {
-    margin: 0;
+    margin-top: 0;
     text-align: justify;
-    line-height: 2;
+    line-height: 1.5;
   }
 
   .gallery-container {

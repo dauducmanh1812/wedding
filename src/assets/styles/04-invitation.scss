@@ -51,7 +51,7 @@
     .polaroid {
       position: relative;
       background-color: var(--color-secondary);
-      padding: 5px 5px 60px 5px;
+      padding: 5px 5px clamp-builder(2, 5) 5px;
       border-radius: 5px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15);
       width: clamp-builder(10, 22);
@@ -72,13 +72,13 @@
     .photo-one {
       transform: rotate(-12deg);
       z-index: 2;
-      top: 30px;
-      left: 5%;
+      top: 40px;
+      left: 3%;
     }
     .photo-two {
       transform: rotate(10deg);
       z-index: 1;
-      right: 5%;
+      right: 3%;
     }
   }
 
@@ -86,7 +86,7 @@
     font-family: RUJHYXJhbWuZCNZWRpdWudHRm;
     display: grid;
     grid-auto-flow: column;
-    margin-top: 100px;
+    margin-top: clamp-builder(3, 6);
 
     .family-title {
       margin-top: 0;

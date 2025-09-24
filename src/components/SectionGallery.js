@@ -70,13 +70,12 @@ function SectionGallery() {
         <div className="our-memories-line"></div>
       </div>
       <div className="flex-container">
-        <h3 className="our-memories-description">
-          This album captures the most beautiful moments of our special
-          day—filled with love, joy, and unforgettable memories. From our
-          heartfelt vows to the first dance, every photo tells a story of our
-          journey together. Surrounded by family and friends, we celebrated a
-          love that will last a lifetime.
-        </h3>
+        <h5 className="our-memories-description eb-garamond-regular">
+          Within these pages lives the poetry of our day—moments of love, joy,
+          and tender beginnings. Surrounded by family and friends, we spoke
+          promises eternal and stepped into forever, hand in hand, hearts
+          entwined.
+        </h5>
       </div>
 
       {/* ✅ Gallery Grid */}

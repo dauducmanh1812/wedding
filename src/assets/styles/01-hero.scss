@@ -27,6 +27,7 @@
   }
 
   span {
+    font-size: clamp-builder(6, 12);
     line-height: 0.5;
     font-weight: normal;
   }
