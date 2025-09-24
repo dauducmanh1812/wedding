@@ -72,7 +72,7 @@
       grid-row: span 1;
     }
     .item-5 {
-      grid-row: span 2; // tall
+      grid-row: span 1; // tall
     }
     .item-6 {
       grid-row: span 1;
@@ -81,8 +81,7 @@
       grid-row: span 1;
     }
     .item-8 {
-      grid-column: span 2; // wide bottom image
-      grid-row: span 2;
+      grid-row: span 1;
     }
 
     @media (min-width: 768px) {
