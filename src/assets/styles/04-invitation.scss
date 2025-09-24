@@ -57,13 +57,8 @@
       width: clamp-builder(10, 22);
       transition: transform 0.3s ease-in-out;
 
-      &:hover {
-        transform: scale(1.05) rotate(0deg) !important;
-        z-index: 10;
-      }
-
       img {
-        aspect-ratio: 20 / 27;
+        aspect-ratio: 20 / 30;
         width: 100%;
         height: auto;
         display: block;
@@ -74,11 +69,21 @@
       z-index: 2;
       top: 40px;
       left: 3%;
+
+      &:hover {
+        transform: scale(1.03) rotate(-12deg) !important;
+        z-index: 10;
+      }
     }
     .photo-two {
       transform: rotate(10deg);
       z-index: 1;
       right: 3%;
+
+      &:hover {
+        transform: scale(1.03) rotate(10deg) !important;
+        z-index: 10;
+      }
     }
   }
 
