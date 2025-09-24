@@ -5,46 +5,23 @@ import "photoswipe/style.css";
 
 import "../assets/styles/06-gallery.scss";
 
+import galleryImage1 from "../assets/images/06-gallery/1.jpg";
+import galleryImage2 from "../assets/images/06-gallery/2.jpg";
+import galleryImage3 from "../assets/images/06-gallery/3.jpg";
+import galleryImage4 from "../assets/images/06-gallery/4.jpg";
+
 function SectionGallery() {
   const [galleryID] = useState("my-test-gallery");
 
   const images = [
-    {
-      largeURL:
-        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg",
-    },
-    {
-      largeURL:
-        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg",
-    },
-    {
-      largeURL:
-        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
-    },
-    {
-      largeURL:
-        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg",
-    },
-    {
-      largeURL:
-        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg",
-    },
-    {
-      largeURL:
-        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg",
-    },
-    {
-      largeURL:
-        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg",
-    },
-    {
-      largeURL:
-        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg",
-    },
-    {
-      largeURL:
-        "https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg",
-    },
+    galleryImage1,
+    galleryImage2,
+    galleryImage3,
+    galleryImage4,
+    galleryImage1,
+    galleryImage2,
+    galleryImage3,
+    galleryImage4,
   ];
 
   useEffect(() => {
@@ -83,8 +60,12 @@ function SectionGallery() {
         <div className="pswp-gallery" id={galleryID}>
           <div className="gallery-grid">
             {images.map((image, index) => (
-              <a href={image.largeURL} key={galleryID + "-" + index}>
-                <img src={image.largeURL} alt="" className="gallery-thumb" />
+              <a
+                href={image}
+                key={galleryID + "-" + index}
+                className={`gallery-item item-${index + 1}`}
+              >
+                <img src={image} alt="" className="gallery-thumb" />
               </a>
             ))}
           </div>

@@ -18,18 +18,20 @@
   font-style: normal;
   font-size: 90px !important;
 
-  h1 {
+  h1,
+  span {
     font-size: clamp-builder(6, 12);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.76);
+    font-weight: normal;
+  }
+
+  h1 {
     margin: 0;
     font-family: MUZUViWSVAtSEFTVEVHSSPVEY;
-    font-weight: normal;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
   }
 
   span {
-    font-size: clamp-builder(6, 12);
     line-height: 0.5;
-    font-weight: normal;
   }
 
   .second {
