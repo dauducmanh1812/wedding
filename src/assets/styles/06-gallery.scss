@@ -24,7 +24,9 @@
 
   .our-memories-description {
     margin-top: 0;
+    margin-bottom: 10px;
     text-align: justify;
+    font-size: clamp-builder(0.8, 1.5);
     line-height: 1.5;
   }
 
@@ -35,7 +37,7 @@
 
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, 1fr);
     gap: 12px;
 
     .gallery-thumb {
@@ -49,25 +51,4 @@
       transform: scale(1.03);
     }
   }
-
-  // .gallery-grid {
-  //   display: grid;
-  //   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  //   gap: 12px;
-  //   width: 100%;
-  //   max-width: 1000px; // keeps it centered and not too wide
-  // }
-
-  // .gallery-thumb {
-  //   width: 100%;
-  //   height: auto;
-  //   border-radius: 8px;
-  //   cursor: pointer;
-  //   object-fit: cover;
-  //   transition: transform 0.2s ease;
-  // }
-
-  // .gallery-thumb:hover {
-  //   transform: scale(1.03);
-  // }
 }
