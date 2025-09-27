@@ -65,10 +65,10 @@
       }
     }
     .photo-one {
-      transform: rotate(-12deg);
+      transform: rotate(-9deg);
       z-index: 2;
       top: 40px;
-      left: 3%;
+      left: 10%;
 
       &:hover {
         transform: scale(1.03) rotate(-12deg) !important;
@@ -76,9 +76,9 @@
       }
     }
     .photo-two {
-      transform: rotate(10deg);
+      transform: rotate(9deg);
       z-index: 1;
-      right: 3%;
+      right: 10%;
 
       &:hover {
         transform: scale(1.03) rotate(10deg) !important;

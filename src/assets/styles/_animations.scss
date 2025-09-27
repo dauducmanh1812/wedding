@@ -146,9 +146,9 @@
     -webkit-transform-origin: right bottom;
     -ms-transform-origin: right bottom;
     transform-origin: right bottom;
-    -webkit-transform: translateX(0) rotate(10deg);
-    -ms-transform: translateX(0) rotate(10deg);
-    transform: translateX(0) rotate(10deg);
+    -webkit-transform: translateX(0) rotate(9deg);
+    -ms-transform: translateX(0) rotate(9deg);
+    transform: translateX(0) rotate(9deg);
     opacity: 1;
   }
 }
@@ -168,16 +168,16 @@
     -webkit-transform-origin: left bottom;
     -ms-transform-origin: left bottom;
     transform-origin: left bottom;
-    -webkit-transform: translateX(0) rotate(-12deg);
-    -ms-transform: translateX(0) rotate(-12deg);
-    transform: translateX(0) rotate(-12deg);
+    -webkit-transform: translateX(0) rotate(-9deg);
+    -ms-transform: translateX(0) rotate(-9deg);
+    transform: translateX(0) rotate(-9deg);
     opacity: 1;
   }
 }
 
 .rotate-in-down-left {
   opacity: 0;
-  transform: translateX(-200px) rotate(-100deg);
+  transform: translateX(-100px) rotate(-100deg);
   transform-origin: left bottom;
 }
 
@@ -188,7 +188,7 @@
 
 .rotate-in-down-right {
   opacity: 0;
-  transform: translateX(200px) rotate(100deg);
+  transform: translateX(100px) rotate(100deg);
   transform-origin: right bottom;
 }
 
