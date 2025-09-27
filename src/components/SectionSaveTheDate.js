@@ -1,6 +1,6 @@
 import "../assets/styles/02-save-the-date.scss";
 
-import couple1 from "../assets/images/02-save-the-date/couple-1.jpg";
+import couple1 from "../assets/images/02-save-the-date/couple-1-optimized.webp";
 
 function SectionSaveTheDate({ siteData }) {
   return (
