@@ -34,12 +34,12 @@ function SectionInvitation({ siteData }) {
       {/* Bride and Groom Image */}
       <div className="photo-gallery-container">
         {/* Groom's Photo */}
-        <div ref={photoOneRef} className="polaroid photo-one fade-in-right">
+        <div ref={photoOneRef} className="polaroid photo-one flip-in-y-left">
           <img src={photo1} alt="Groom in a grey suit" />
         </div>
 
         {/* Bride's Photo */}
-        <div ref={photoTwoRef} className="polaroid photo-two fade-in-left">
+        <div ref={photoTwoRef} className="polaroid photo-two flip-in-y-right">
           <img src={photo2} alt="Bride with a veil" />
         </div>
       </div>

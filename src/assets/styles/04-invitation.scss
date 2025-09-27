@@ -68,7 +68,7 @@
       transform: rotate(-9deg);
       z-index: 2;
       top: 40px;
-      left: 10%;
+      left: 3%;
 
       &:hover {
         transform: scale(1.03) rotate(-12deg) !important;
@@ -78,7 +78,7 @@
     .photo-two {
       transform: rotate(9deg);
       z-index: 1;
-      right: 10%;
+      right: 3%;
 
       &:hover {
         transform: scale(1.03) rotate(10deg) !important;
