@@ -1,7 +1,8 @@
 import "../assets/styles/05-event-details.scss";
 
-import eventDetailsIcon2 from "../assets/images/event-details/icon2.png";
-import eventDetailsIcon3 from "../assets/images/event-details/icon3.png";
+import eventDetailsIcon1 from "../assets/images/05-event-details/icon1.png";
+import eventDetailsIcon2 from "../assets/images/05-event-details/icon2.png";
+import eventDetailsIcon3 from "../assets/images/05-event-details/icon3.png";
 
 function SectionEventDetails({ siteData }) {
   return (
@@ -9,17 +10,12 @@ function SectionEventDetails({ siteData }) {
       className="section section-event-details"
       style={{
         paddingTop: 0,
-        backgroundImage: `url("/images/background2.jpg")`,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
       }}
     >
-      <img
-        src="/images/event-details/icon1.png"
-        width={180}
-        alt="Event Details Icon1"
-      />
+      <img src={eventDetailsIcon1} width={180} alt="Event Details Icon1" />
       <h1 className="event-time">
         TIỆC NHÀ GÁI ĐƯỢC TỔ CHỨC <br />
         VÀO LÚC {siteData.event.time}
@@ -62,7 +58,12 @@ function SectionEventDetails({ siteData }) {
         {siteData.event.venue_sub.toUpperCase()}
       </h1>
 
-      <h3 className="eb-garamond-regular" style={{ marginBottom: "5px", marginTop: "5px" }}>Địa chỉ: {siteData.event.address}</h3>
+      <h3
+        className="eb-garamond-regular"
+        style={{ marginBottom: "5px", marginTop: "5px" }}
+      >
+        Địa chỉ: {siteData.event.address}
+      </h3>
 
       <a
         className="map-guide"
