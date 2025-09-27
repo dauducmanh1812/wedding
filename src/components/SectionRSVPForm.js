@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import "../assets/styles/07-rsvp-form.scss";
 
 function SectionRSVPForm({ siteData }) {
+  const headingRef = useScrollAnimation();
+  const buttonRef = useScrollAnimation();
+  const countdownRef = useScrollAnimation();
+
   // State for Modals
   const [showThankYouModal, setShowThankYouModal] = useState(false);
 
@@ -74,11 +79,13 @@ function SectionRSVPForm({ siteData }) {
   };
   return (
     <div className="section section-rsvp-form eb-garamond-regular">
-      <h1 className="confirm-attending">XÁC NHẬN THAM DỰ</h1>
-      <p className="confirm-attending-sub">
-        Vui lòng xác nhận sự có mặt của bạn để chúng mình <br />
-        chuẩn bị đón tiếp một cách chu đáo nhất. Trân trọng!
-      </p>
+      <div ref={headingRef} className="fade-in-up">
+        <h1 className="confirm-attending">XÁC NHẬN THAM DỰ</h1>
+        <p className="confirm-attending-sub">
+          Vui lòng xác nhận sự có mặt của bạn để chúng mình <br />
+          chuẩn bị đón tiếp một cách chu đáo nhất. Trân trọng!
+        </p>
+      </div>
       <form className="rsvp-form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -114,18 +121,20 @@ function SectionRSVPForm({ siteData }) {
           <option value="partner">Mình đi cùng người thương</option>
           <option value="family">Mình đi cùng gia đình</option>
         </select>
-        <button type="submit" className="submit-btn">
+        <button ref={buttonRef} type="submit" className="submit-btn fade-in-up">
           GỬI LỜI NHẮN
         </button>
       </form>
 
-      <h2 className="monsieur-la-doulaise-regular countdown-heading">
-        Countdown
-      </h2>
-      <h2 className="countdown-numbers">
-        {countdown.days}:{countdown.hours}:{countdown.minutes}:
-        {countdown.seconds}
-      </h2>
+      <div ref={countdownRef} className="fade-in-up">
+        <h2 className="monsieur-la-doulaise-regular countdown-heading">
+          Countdown
+        </h2>
+        <h2 className="countdown-numbers">
+          {countdown.days}:{countdown.hours}:{countdown.minutes}:
+          {countdown.seconds}
+        </h2>
+      </div>
 
       {showThankYouModal && (
         <div
