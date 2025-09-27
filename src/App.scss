@@ -80,13 +80,25 @@
 
 .fade-in-up {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease-out;
+  transform: translateY(25px);
+  transition: all 0.7s ease-out;
 }
 
 .fade-in-up.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.pulse-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.7s ease-out;
+}
+
+.pulse-in.show {
+  opacity: 1;
+  transform: translateY(0);
+  animation: pulse 0.7s 1;
 }
 
 @-webkit-keyframes pulse {
@@ -121,9 +133,14 @@
 
   100% {
     -webkit-transform: scale(1);
-    -ms-transform: scale(1);
     transform: scale(1);
   }
+}
+
+.pulse-once {
+  animation-name: pulse;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
 }
 /* Transition + Animation */
 
@@ -198,4 +215,8 @@ h5 {
     #{$yAxisIntersection}rem + #{$slope * 100}vw,
     #{$maxFontSize}rem
   );
+}
+
+#webpack-dev-server-client-overlay {
+  display: none !important;
 }
