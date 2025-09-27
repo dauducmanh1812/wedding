@@ -5,14 +5,14 @@ import "photoswipe/style.css";
 
 import "../assets/styles/06-gallery.scss";
 
-import galleryImage1 from "../assets/images/06-gallery/1.jpg";
-import galleryImage2 from "../assets/images/06-gallery/2.jpg";
-import galleryImage3 from "../assets/images/06-gallery/3.jpg";
-import galleryImage4 from "../assets/images/06-gallery/4.jpg";
-import galleryImage5 from "../assets/images/06-gallery/5.jpg";
-import galleryImage6 from "../assets/images/06-gallery/6.jpg";
-import galleryImage7 from "../assets/images/06-gallery/7.jpg";
-import galleryImage8 from "../assets/images/06-gallery/8.jpg";
+import galleryImage1 from "../assets/images/06-gallery/1-optimized.webp";
+import galleryImage2 from "../assets/images/06-gallery/2-optimized.webp";
+import galleryImage3 from "../assets/images/06-gallery/3-optimized.webp";
+import galleryImage4 from "../assets/images/06-gallery/4-optimized.webp";
+import galleryImage5 from "../assets/images/06-gallery/5-optimized.webp";
+import galleryImage6 from "../assets/images/06-gallery/6-optimized.webp";
+import galleryImage7 from "../assets/images/06-gallery/7-optimized.webp";
+import galleryImage8 from "../assets/images/06-gallery/8-optimized.webp";
 
 function SectionGallery() {
   const [galleryID] = useState("my-test-gallery");

@@ -1,8 +1,8 @@
 import "../assets/styles/05-event-details.scss";
 
-import eventDetailsIcon1 from "../assets/images/05-event-details/icon1.png";
-import eventDetailsIcon2 from "../assets/images/05-event-details/icon2.png";
-import eventDetailsIcon3 from "../assets/images/05-event-details/icon3.png";
+import eventDetailsIcon1 from "../assets/images/05-event-details/icon1-optimized.webp";
+import eventDetailsIcon2 from "../assets/images/05-event-details/icon2-optimized.webp";
+import eventDetailsIcon3 from "../assets/images/05-event-details/icon3-optimized.webp";
 
 function SectionEventDetails({ siteData }) {
   return (
