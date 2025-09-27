@@ -58,8 +58,52 @@ Place audio in `src/assets/audio/`.
 Modify CSS variables in `src/App.scss` `:root`.
 
 ### Animations
-Use `useScrollAnimation` hook for scroll-triggered fade-ins.
-Apply `className="fade-in-up"` and use the hook for automatic triggers.
+Use `useScrollAnimation` hook for scroll-triggered fade-ins. The hook uses IntersectionObserver API to trigger animations when elements come into view.
+
+#### How to Use
+1. Import the hook in your component:
+   ```javascript
+   import { useScrollAnimation } from '../hooks/useScrollAnimation';
+   ```
+
+2. Call the hook to get a ref (optional: pass custom className, defaults to 'fade-in-up'):
+   ```javascript
+   const animationRef = useScrollAnimation();
+   ```
+
+3. Apply the ref and className to the element you want to animate:
+   ```javascript
+   <div ref={animationRef} className="fade-in-up">
+     Content to animate
+   </div>
+   ```
+
+#### Example: Using in SectionHero
+```javascript
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+function SectionHero({ siteData }) {
+  const animationRef = useScrollAnimation();
+
+  return (
+    <div ref={animationRef} className="fade-in-up section section-hero">
+      <div className="arcittya-begatri">
+        <h1 className="fist-name">
+          {siteData.couple.shortName_bride.toUpperCase()}
+        </h1>
+        <div className="second">
+          <span>&</span>{" "}
+          <h1 className="second-name">
+            {siteData.couple.shortName_groom.toUpperCase()}
+          </h1>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+The element will be invisible initially (opacity: 0, translated down 20px). When it scrolls into view, the `show` class is added, triggering a smooth fade-in and slide-up animation (0.5s ease-out).
 
 ## 📝 RSVP Form
 
