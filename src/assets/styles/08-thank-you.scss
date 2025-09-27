@@ -1,14 +1,16 @@
+@use "./_function.scss" as *;
+
 /* 08_Thank You Section */
 .section-thank-you {
   position: relative;
-  height: 80vh;
-  background-image: url("../images/01-hero/hero1.jpg");
+  background-image: url("../images/08-thank-you/1.jpg");
   background-size: cover;
   background-position: center;
-  color: white;
-  min-height: 60vh;
+  color: var(--color-secondary);
+  min-height: 35vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -24,13 +26,16 @@
 }
 
 .thank-you-content {
-  position: relative; /* To ensure text is on top of the overlay */
+  width: 90%;
+  position: relative;
   z-index: 1;
-  max-width: 700px;
-}
-
-.thank-you-content p {
-  font-size: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.5;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+
+  font-size: clamp-builder(0.9, 2.2);
+  font-weight: 400;
+
+  &.signature {
+    font-size: clamp-builder(2, 3);
+  }
 }

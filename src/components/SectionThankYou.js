@@ -2,12 +2,12 @@ import "../assets/styles/08-thank-you.scss";
 
 function SectionThankYou({ siteData }) {
   return (
-    <section className="section section-thank-you">
-      <div className="thank-you-content">
-        <p>{siteData.thankYou.message}</p>
-        <p>{siteData.thankYou.signature}</p>
+    <div className="section section-thank-you">
+      <div className="thank-you-content eb-garamond-regular">{siteData.thankYou.message}</div>
+      <div className="thank-you-content monsieur-la-doulaise-regular signature">
+        {siteData.thankYou.signature}
       </div>
-    </section>
+    </div>
   );
 }
 
