@@ -26,16 +26,17 @@
 }
 
 .thank-you-content {
-  width: 90%;
+  width: 85%;
   position: relative;
   z-index: 1;
-  line-height: 1.5;
+  line-height: 1.4;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 
-  font-size: clamp-builder(0.9, 2.2);
+  font-family: var(--rsvp-font-family-1);
+  font-size: clamp-builder(0.9, 1.9);
   font-weight: 400;
 
   &.signature {
-    font-size: clamp-builder(2, 3);
+    font-size: clamp-builder(2, 3.2);
   }
 }
