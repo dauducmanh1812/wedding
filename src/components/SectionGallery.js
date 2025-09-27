@@ -9,6 +9,10 @@ import galleryImage1 from "../assets/images/06-gallery/1.jpg";
 import galleryImage2 from "../assets/images/06-gallery/2.jpg";
 import galleryImage3 from "../assets/images/06-gallery/3.jpg";
 import galleryImage4 from "../assets/images/06-gallery/4.jpg";
+import galleryImage5 from "../assets/images/06-gallery/5.jpg";
+import galleryImage6 from "../assets/images/06-gallery/6.jpg";
+import galleryImage7 from "../assets/images/06-gallery/7.jpg";
+import galleryImage8 from "../assets/images/06-gallery/8.jpg";
 
 function SectionGallery() {
   const [galleryID] = useState("my-test-gallery");
@@ -17,11 +21,11 @@ function SectionGallery() {
     galleryImage1,
     galleryImage2,
     galleryImage3,
+    galleryImage6,
+    galleryImage7,
     galleryImage4,
-    galleryImage1,
-    galleryImage2,
-    galleryImage3,
-    galleryImage4,
+    galleryImage5,
+    galleryImage8,
   ];
 
   useEffect(() => {

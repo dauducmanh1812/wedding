@@ -63,7 +63,7 @@
       grid-column: span 2; // wide landscape
     }
     .item-2 {
-      grid-row: span 2; // tall portrait
+      grid-row: span 1; // tall portrait
     }
     .item-3 {
       grid-row: span 1;
@@ -75,13 +75,13 @@
       grid-row: span 1; // tall
     }
     .item-6 {
-      grid-row: span 1;
+      grid-column: span 1;
     }
     .item-7 {
-      grid-row: span 1;
+      grid-column: span 1;
     }
     .item-8 {
-      grid-row: span 1;
+      grid-column: span 2;
     }
 
     @media (min-width: 768px) {

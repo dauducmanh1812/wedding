@@ -70,7 +70,6 @@ function SectionRSVPForm({ siteData }) {
       });
     } catch (error) {
       console.error("Submission error:", error);
-      alert("Không thể kết nối đến Google Sheets.");
     }
   };
   return (
