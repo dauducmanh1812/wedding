@@ -122,7 +122,7 @@ function SectionRSVPForm({ siteData }) {
       <h2 className="monsieur-la-doulaise-regular countdown-heading">
         Countdown
       </h2>
-      <h2 className="eb-garamond-regular countdown-numbers">
+      <h2 className="countdown-numbers">
         {countdown.days}:{countdown.hours}:{countdown.minutes}:
         {countdown.seconds}
       </h2>

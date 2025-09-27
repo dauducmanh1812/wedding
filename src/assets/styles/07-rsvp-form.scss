@@ -26,10 +26,11 @@
     margin-bottom: 0;
   }
   .countdown-numbers {
-    font-size: 3rem;
-    letter-spacing: 10px;
+    font-family: MUZUViWSVAtSEFTVEVHSSPVEY;
     font-weight: "lighter";
-    margin: 0;
+    font-size: clamp-builder(3.2, 4.2);
+    letter-spacing: 10px;
+    margin: 10px;
   }
 
   .rsvp-form {
