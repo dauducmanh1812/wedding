@@ -85,11 +85,23 @@
       -webkit-appearance: none;
       -moz-appearance: none;
       background-color: transparent;
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHg9IjAiIHk9IjAiPjxwYXRoIGQ9Ik0xIDEgTDEwIDggTDEgMloiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0ibWJidCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIvPjwvc3ZnPg==");
-      background-repeat: no-repeat;
-      background-position: right 12px center;
-      background-size: 1rem;
       color: var(--color-primary);
+      position: relative;
+
+      &::after {
+        content: "▼";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-primary);
+        pointer-events: none;
+        font-size: 14px;
+      }
+
+      &:focus::after {
+        content: "▲";
+      }
 
       option {
         color: #000;
