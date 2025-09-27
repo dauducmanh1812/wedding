@@ -79,6 +79,12 @@ $background-color_4: #52634d;
       background-position: right 12px center;
       background-size: 1rem;
       background-color: white;
+      color: #000;
+
+      option {
+        color: #000;
+        -webkit-text-fill-color: #000;
+      }
     }
     button {
       padding: 15px;
