@@ -65,12 +65,20 @@ $background-color_4: #52634d;
     }
     select {
       width: 100%;
-      padding: 12px;
+      padding: 12px 40px 12px 12px;
       border: 1px solid #ccc;
       border-radius: 25px;
       font-family: $font-family_1;
       font-size: 1rem;
       box-sizing: border-box;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHg9IjAiIHk9IjAiPjxwYXRoIGQ9Ik0xIDEgTDEwIDggTDEgMloiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0ibWJidCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIvPjwvc3ZnPg==");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 1rem;
+      background-color: white;
     }
     button {
       padding: 15px;
