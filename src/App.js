@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 import "./App.scss";
 import siteData from "./data.json";
@@ -11,24 +11,20 @@ import SectionEventDetails from "./components/SectionEventDetails";
 import SectionGallery from "./components/SectionGallery";
 import SectionRSVPForm from "./components/SectionRSVPForm";
 import SectionThankYou from "./components/SectionThankYou";
+import AudioPlayer from "./components/AudioPlayer";
 
 function App() {
-  // Ref for Audio
-  const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const audioPlayerRef = useRef(null);
 
-  // Audio toggle handler
   const toggleAudio = () => {
-    if (isPlaying === false) {
-      audioRef.current.play();
-      setIsPlaying(true);
+    if (audioPlayerRef.current) {
+      audioPlayerRef.current.toggleAudio();
     }
   };
 
   return (
     <div className="wedding-invitation" onClick={toggleAudio}>
-      {/* --- AUDIO --- */}
-      <audio ref={audioRef} src="/audio/background-music.mp3" loop />
+      <AudioPlayer ref={audioPlayerRef} />
 
       <div className="wedding-invitation-container">
         <SectionHero siteData={siteData} />
