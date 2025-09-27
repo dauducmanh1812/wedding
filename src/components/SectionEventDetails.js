@@ -6,15 +6,7 @@ import eventDetailsIcon3 from "../assets/images/05-event-details/icon3.png";
 
 function SectionEventDetails({ siteData }) {
   return (
-    <div
-      className="section section-event-details"
-      style={{
-        paddingTop: 0,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <div className="section section-event-details">
       <img src={eventDetailsIcon1} width={180} alt="Event Details Icon1" />
       <h1 className="event-time">
         TIỆC NHÀ GÁI ĐƯỢC TỔ CHỨC <br />
@@ -23,45 +15,35 @@ function SectionEventDetails({ siteData }) {
 
       <h1 className="event-dining-weekday">{siteData.event.dining.weekday}</h1>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          gap: "20px",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center" }}>
+      <div className="date-container">
+        <div>
           <h1 className="month">{siteData.event.dining.month}</h1>
         </div>
         <h1 className="day">{siteData.event.dining.day}</h1>
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div>
           <h1 className="year">{siteData.event.dining.year}</h1>
         </div>
       </div>
 
-      <h3 className="lunar-date eb-garamond-regular" style={{ margin: "5px" }}>
+      <h3 className="lunar-date eb-garamond-regular">
         {siteData.event.lunarDate}
       </h3>
 
       <img
-        style={{ margin: "20px" }}
+        className="img-icon2"
         src={eventDetailsIcon2}
         width={70}
         alt="Event Details Icon2"
       />
 
-      <h1 className="venue" style={{ marginTop: "10px", marginBottom: 0 }}>
+      <h1 className="venue venue-first">
         TẠI {siteData.event.venue.toUpperCase()}
       </h1>
-      <h1 className="venue" style={{ marginBottom: "10px", marginTop: 0 }}>
+      <h1 className="venue venue-second">
         {siteData.event.venue_sub.toUpperCase()}
       </h1>
 
-      <h3
-        className="eb-garamond-regular"
-        style={{ marginBottom: "5px", marginTop: "5px" }}
-      >
+      <h3 className="eb-garamond-regular address-h3">
         Địa chỉ: {siteData.event.address}
       </h3>
 
