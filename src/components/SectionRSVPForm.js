@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import ModalThankYou from "./ModalThankYou";
 import "../assets/styles/07-rsvp-form.scss";
 
 function SectionRSVPForm({ siteData }) {
@@ -9,6 +10,9 @@ function SectionRSVPForm({ siteData }) {
 
   // State for Modals
   const [showThankYouModal, setShowThankYouModal] = useState(false);
+
+  // State for loading
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // State for RSVP Form
   const [formData, setFormData] = useState({
@@ -54,6 +58,7 @@ function SectionRSVPForm({ siteData }) {
   // Form submission handler
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
       await fetch(
@@ -65,9 +70,6 @@ function SectionRSVPForm({ siteData }) {
           body: JSON.stringify(formData),
         }
       );
-    } catch (error) {
-      console.error("Submission error:", error);
-    } finally {
       setShowThankYouModal(true);
       setFormData({
         name: "",
@@ -75,6 +77,18 @@ function SectionRSVPForm({ siteData }) {
         attending: "",
         guest: "none",
       });
+    } catch (error) {
+      console.error("Submission error:", error);
+      // Still show thank you even on error, since it might have worked due to no-cors
+      setShowThankYouModal(true);
+      setFormData({
+        name: "",
+        message: "",
+        attending: "",
+        guest: "none",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
   return (
@@ -121,8 +135,19 @@ function SectionRSVPForm({ siteData }) {
           <option value="partner">Mình đi cùng người thương</option>
           <option value="family">Mình đi cùng gia đình</option>
         </select>
-        <button ref={buttonRef} type="submit" className="submit-btn fade-in-up">
-          GỬI LỜI NHẮN
+        <button
+          ref={buttonRef}
+          type="submit"
+          className="submit-btn fade-in-up"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <>
+              <span className="loading-spinner"></span>
+            </>
+          ) : (
+            "GỬI LỜI NHẮN"
+          )}
         </button>
       </form>
 
@@ -137,24 +162,10 @@ function SectionRSVPForm({ siteData }) {
       </div>
 
       {showThankYouModal && (
-        <div
-          className="modal-overlay"
-          onClick={() => setShowThankYouModal(false)}
-        >
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="modal-close-btn"
-              onClick={() => setShowThankYouModal(false)}
-            >
-              &times;
-            </button>
-            <h3>Thank you!</h3>
-            <p>
-              Những lời chúc này sẽ là động lực rất lớn giúp chúng mình bước vào
-              một cánh cửa hôn nhân đầy mới mẻ.
-            </p>
-          </div>
-        </div>
+        <ModalThankYou
+          onClose={() => setShowThankYouModal(false)}
+          siteData={siteData}
+        />
       )}
     </div>
   );

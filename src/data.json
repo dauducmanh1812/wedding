@@ -39,5 +39,8 @@
   "thankYou": {
     "message": "Cảm ơn bạn đã dành tình cảm cho chúng mình! Sự hiện diện của bạn chính là món quà ý nghĩa nhất, và chúng mình vô cùng trân quý khi được cùng bạn chia sẻ niềm hạnh phúc trong ngày trọng đại này.",
     "signature": "Thank you!"
+  },
+  "modal": {
+    "thankYou": "Những lời chúc này sẽ là động lực rất lớn giúp chúng mình bước vào một cánh cửa hôn nhân đầy mới mẻ."
   }
 }

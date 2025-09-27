@@ -1,0 +1,81 @@
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  background-image: url("../images/modals/bg3-optimized.webp");
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  max-width: 90%;
+  width: 500px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: right;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: -10px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #000;
+  z-index: 1001;
+}
+
+.signature {
+  font-family: "EB Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.best-text,
+.day-text,
+.ever-text {
+  font-family: QSTUSQUUSUGQUULUFRElVTSUVEY, cursive;
+  text-align: right;
+  color: var(--color-primary);
+}
+
+.thank-you-text {
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 3rem;
+  line-height: 0.8;
+  text-align: right;
+  z-index: 1001;
+  color: var(--color-primary);
+}
+
+.modal-message {
+  font-family: RUJHYXJhbWuZCSZWdbGFyLnRZg, serif;
+  text-align: right;
+  margin-top: 20px;
+  color: var(--color-primary);
+}
+
+.modal-date {
+  font-family: RUJHYXJhbWuZCSZWdbGFyLnRZg, serif;
+  text-align: right;
+  margin-top: 10px;
+  color: var(--color-primary);
+}
+/* Modals */
