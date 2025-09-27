@@ -1,13 +1,6 @@
 @use "./_function.scss" as *;
 
 /* 06_RSVP Form */
-$color_1: #333;
-$color_2: white;
-$font-family_1: inherit;
-$background-color_1: #f0f0f0;
-$background-color_2: var(--color-primary);
-$background-color_3: #ddd;
-$background-color_4: #52634d;
 
 .section-rsvp-form {
   background-image: url("../images/07-rsvp-form/bg1.png"),
@@ -50,25 +43,33 @@ $background-color_4: #52634d;
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 25px;
-      font-family: $font-family_1;
+      font-family: var(--rsvp-font-family-1);
       font-size: 1rem;
       box-sizing: border-box;
+
+      &::placeholder {
+        color: #666;
+      }
     }
     textarea {
       width: 100%;
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 25px;
-      font-family: $font-family_1;
+      font-family: var(--rsvp-font-family-1);
       font-size: 1rem;
       box-sizing: border-box;
+
+      &::placeholder {
+        color: #666;
+      }
     }
     select {
       width: 100%;
       padding: 12px 40px 12px 12px;
       border: 1px solid #ccc;
       border-radius: 25px;
-      font-family: $font-family_1;
+      font-family: var(--rsvp-font-family-1);
       font-size: 1rem;
       box-sizing: border-box;
       appearance: none;
@@ -79,7 +80,7 @@ $background-color_4: #52634d;
       background-position: right 12px center;
       background-size: 1rem;
       background-color: white;
-      color: #000;
+      color: #666;
 
       option {
         color: #000;
@@ -91,26 +92,26 @@ $background-color_4: #52634d;
       border-radius: 25px;
       border: none;
       cursor: pointer;
-      font-family: $font-family_1;
+      font-family: var(--rsvp-font-family-1);
       font-size: 1.1rem;
       font-weight: bold;
       transition: background-color 0.3s;
     }
     .submit-btn {
-      border: 1px solid $background-color_2;
+      border: 1px solid var(--color-primary);
       background-color: transparent;
-      color: $background-color_2;
+      color: var(--color-primary);
 
       &:hover {
-        color: $color_2;
-        background-color: $background-color_2;
+        color: var(--rsvp-color-2);
+        background-color: var(--color-primary);
       }
     }
     .gifting-btn {
-      background-color: $background-color_2;
-      color: $color_2;
+      background-color: var(--color-primary);
+      color: var(--rsvp-color-2);
       &:hover {
-        background-color: $background-color_4;
+        background-color: var(--rsvp-background-color-4);
       }
     }
   }

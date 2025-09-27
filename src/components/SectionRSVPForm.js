@@ -60,7 +60,9 @@ function SectionRSVPForm({ siteData }) {
           body: JSON.stringify(formData),
         }
       );
-
+    } catch (error) {
+      console.error("Submission error:", error);
+    } finally {
       setShowThankYouModal(true);
       setFormData({
         name: "",
@@ -68,8 +70,6 @@ function SectionRSVPForm({ siteData }) {
         attending: "",
         guest: "none",
       });
-    } catch (error) {
-      console.error("Submission error:", error);
     }
   };
   return (
