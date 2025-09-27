@@ -21,7 +21,8 @@
 
   /* Countdown */
   .countdown-heading {
-    font-size: 4.5rem;
+    font-size: clamp-builder(3, 4);
+    margin-top: 20px;
     margin-bottom: 0;
   }
   .countdown-numbers {
