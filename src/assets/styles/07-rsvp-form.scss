@@ -111,15 +111,8 @@
       color: var(--color-secondary);
 
       &:hover {
-        color: var(--rsvp-color-2);
-        background-color: var(--color-primary);
-      }
-    }
-    .gifting-btn {
-      background-color: var(--color-primary);
-      color: var(--rsvp-color-2);
-      &:hover {
-        background-color: var(--rsvp-background-color-4);
+        color: var(--color-primary);
+        background-color: var(--color-secondary);
       }
     }
   }
