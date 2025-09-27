@@ -1,24 +1,32 @@
 import "../assets/styles/04-invitation.scss";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 import photo1 from "../assets/images/04-invitation/photo1-optimized.webp";
 import photo2 from "../assets/images/04-invitation/photo2-optimized.webp";
 
 function SectionInvitation({ siteData }) {
+  const headingRef = useScrollAnimation();
+  const brideNameRef = useScrollAnimation();
+  const textAndRef = useScrollAnimation();
+  const groomNameRef = useScrollAnimation();
+  const photoOneRef = useScrollAnimation();
+  const photoTwoRef = useScrollAnimation();
+
   return (
     <div className="section section-invitation">
       {/* Heading */}
-      <h3 className="heading">
+      <h3 ref={headingRef} className="heading fade-in-up">
         THÂN MỜI TỚI DỰ LỄ CƯỚI THÂN MẬT <br />
         CỦA CHÚNG TÔI
       </h3>
 
       {/* Bride and Groom Info */}
       <div className="information-container">
-        <h2 className="information-name">
+        <h2 ref={brideNameRef} className="information-name fade-in-left">
           {siteData.couple.bride.toUpperCase()}
         </h2>
-        <h1 className="text-and">&</h1>
-        <h2 className="information-name">
+        <h1 ref={textAndRef} className="text-and fade-in-center">&</h1>
+        <h2 ref={groomNameRef} className="information-name fade-in-right">
           {siteData.couple.groom.toUpperCase()}
         </h2>
       </div>
@@ -26,12 +34,12 @@ function SectionInvitation({ siteData }) {
       {/* Bride and Groom Image */}
       <div className="photo-gallery-container">
         {/* Groom's Photo */}
-        <div className="polaroid photo-one">
+        <div ref={photoOneRef} className="polaroid photo-one rotate-in-down-left">
           <img src={photo1} alt="Groom in a grey suit" />
         </div>
 
         {/* Bride's Photo */}
-        <div className="polaroid photo-two">
+        <div ref={photoTwoRef} className="polaroid photo-two rotate-in-down-right">
           <img src={photo2} alt="Bride with a veil" />
         </div>
       </div>
