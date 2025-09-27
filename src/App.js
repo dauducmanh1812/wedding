@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import "./App.scss";
 import siteData from "./data.json";
@@ -23,20 +25,25 @@ function App() {
   };
 
   return (
-    <div className="wedding-invitation" onClick={toggleAudio}>
-      <AudioPlayer ref={audioPlayerRef} />
+    <>
+      <div className="wedding-invitation" onClick={toggleAudio}>
+        <AudioPlayer ref={audioPlayerRef} />
 
-      <div className="wedding-invitation-container">
-        <SectionHero siteData={siteData} />
-        <SectionSaveTheDate siteData={siteData} />
-        <SectionCalendar />
-        <SectionInvitation siteData={siteData} />
-        <SectionEventDetails siteData={siteData} />
-        <SectionGallery />
-        <SectionRSVPForm siteData={siteData} />
-        <SectionThankYou siteData={siteData} />
+        <div className="wedding-invitation-container">
+          <SectionHero siteData={siteData} />
+          <SectionSaveTheDate siteData={siteData} />
+          <SectionCalendar />
+          <SectionInvitation siteData={siteData} />
+          <SectionEventDetails siteData={siteData} />
+          <SectionGallery />
+          <SectionRSVPForm siteData={siteData} />
+          <SectionThankYou siteData={siteData} />
+        </div>
       </div>
-    </div>
+
+      <Analytics />
+      <SpeedInsights />
+    </>
   );
 }
 
