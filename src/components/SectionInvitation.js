@@ -1,7 +1,7 @@
 import "../assets/styles/04-invitation.scss";
 
-import photo1 from "../assets/images/04-invitation/photo1.jpg";
-import photo2 from "../assets/images/04-invitation/photo2.jpg";
+import photo1 from "../assets/images/04-invitation/photo1-optimized.webp";
+import photo2 from "../assets/images/04-invitation/photo2-optimized.webp";
 
 function SectionInvitation({ siteData }) {
   return (
